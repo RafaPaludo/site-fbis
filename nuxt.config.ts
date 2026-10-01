@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxt/fonts'
   ],
 
   devtools: {
@@ -43,5 +44,18 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  fonts: {
+    families: [
+      {
+        name: 'Inter',
+        weights: [400, 500, 600, 700]
+      },
+      {
+        name: 'Space Grotesk',
+        weights: [400, 500, 600, 700]
+      }
+    ]
   }
 })
