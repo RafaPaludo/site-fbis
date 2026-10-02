@@ -1,11 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-  colorMode: 'dark'
+  colorMode: 'light'
 })
 
 const { data: page } = await useAsyncData('index', () => queryCollection('content').first())
+
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Página não encontrada', fatal: true })
 }
 
 const title = page.value?.seo?.title || page.value?.title
@@ -60,10 +61,11 @@ const { copy, copied } = useClipboard()
   <div v-if="page">
     <!-- Hero -->
     <UPageHero
+      orientation="horizontal"
       :ui="{
-        root: 'pb-24 sm:pb-32',
+        root: 'pb-0 sm:pb-0',
         container: 'relative z-10 lg:py-32',
-        wrapper: 'flex flex-col items-center',
+        wrapper: 'flex flex-col',
         title: 'sm:text-6xl lg:text-7xl xl:text-[80px] tracking-tighter leading-[1.05]',
         description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default',
         links: 'gap-3'
@@ -83,7 +85,7 @@ const { copy, copied } = useClipboard()
             color="neutral"
             variant="soft"
             :label="page.hero.headline"
-            class="rounded-full px-3 py-1.5 gap-1.5 bg-white/5 backdrop-blur-sm"
+            class="rounded-full px-3 py-1.5 gap-1.5 bg-primary/5 backdrop-blur-sm"
           >
             <template #leading>
               <UChip
@@ -129,7 +131,7 @@ const { copy, copied } = useClipboard()
 
       <template #links>
         <Motion
-          class="flex flex-wrap justify-center gap-6"
+          class="gap-6"
           v-bind="enterMotion(0.65)"
         >
           <UButton
@@ -147,22 +149,27 @@ const { copy, copied } = useClipboard()
       >
         <HeroTerminal :lines="page.terminal.lines" />
       </Motion>
-
-      <Motion
-        class="max-w-lg mx-auto w-full"
-        v-bind="scrollMotion(0.95)"
-      >
-        <UPageLogos
-          :title="page.logos.title"
-          :items="page.logos.items"
-          :ui="{
-            title: 'font-mono uppercase text-xs tracking-[0.12em] text-dimmed',
-            logos: 'gap-0',
-            logo: 'text-muted size-6'
-          }"
-        />
-      </Motion>
     </UPageHero>
+
+    <!-- Marquee -->
+    <UMarquee
+      v-if="page.marquee.label"
+      reverse
+      pause-on-hover
+      :ui="{
+        root: 'bg-[#152B50] h-12 text-white',
+        content: 'gap-12'
+      }"
+    >
+      <a
+        v-for="value in 4"
+        :key="value"
+        :href="page.marquee.link"
+        class="text-sm font-semibold tracking-[0.08em] uppercase"
+      >
+        {{ page.marquee.label }}
+      </a>
+    </UMarquee>
 
     <!-- Features -->
     <UPageSection

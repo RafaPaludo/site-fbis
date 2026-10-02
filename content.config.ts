@@ -23,6 +23,10 @@ export const collections = {
         headline: z.string().optional(),
         links: z.array(createLinkSchema())
       }),
+      marquee: z.object({
+        label: z.string(),
+        link: z.string().optional()
+      }),
       terminal: z.object({
         lines: z.array(z.object({
           segments: z.array(z.object({

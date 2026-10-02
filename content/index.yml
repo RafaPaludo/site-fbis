@@ -1,20 +1,18 @@
 seo:
   title: FBIS 2027 — Fórum Brasileiro de Inovação Sindical
   description: O FBIS 2027 reúne lideranças e organizações sindicais em Brasília para discutir inovação, transformação e os novos desafios do movimento sindical.
-title: "Observe less.\nUnderstand more."
-description: Map your entire system in real-time, surface anomalies before they cascade, and eliminate the dashboards you never needed.
+title: "O futuro do movimento sindical começa aqui"
+description: Um encontro nacional que reúne organizações e lideranças para compartilhar experiências, discutir inovação e construir novos caminhos para o movimento sindical.
 hero:
-  headline: "v2.0 — Now with predictive alerting"
+  headline: "25–26 DE MAIO DE 2027 · BRASÍLIA/DF"
   links:
-    - label: Start for free
+    - label: Quero Participar
       color: primary
       size: xl
       to: '#'
-    - label: View demo
-      size: xl
-      color: neutral
-      variant: soft
-      to: '#'
+marquee:
+  label: "FBIS 2027 · BRASÍLIA/DF · 25 E 26 DE MAIO · LOTE 1 ABERTO"
+  link: "https://api.whatsapp.com/send/?phone=5548991218168&text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+FBIS+2027&type=phone_number&app_absent=0"
 terminal:
   lines:
     - segments:
