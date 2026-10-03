@@ -27,6 +27,18 @@ export const collections = {
         label: z.string(),
         link: z.string().optional()
       }),
+      lastExperience: z.object({
+        headline: z.string().optional(),
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        image: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().nonempty()
+        }),
+        items: z.array(z.object({
+          label: z.string()
+        }))
+      }),
       terminal: z.object({
         lines: z.array(z.object({
           segments: z.array(z.object({
@@ -34,10 +46,6 @@ export const collections = {
             style: z.string()
           }))
         }))
-      }),
-      logos: z.object({
-        title: z.string().nonempty(),
-        items: z.array(z.string())
       }),
       features: z.object({
         headline: z.string().optional(),

@@ -4,7 +4,7 @@ seo:
 title: "O futuro do movimento sindical começa aqui"
 description: Um encontro nacional que reúne organizações e lideranças para compartilhar experiências, discutir inovação e construir novos caminhos para o movimento sindical.
 hero:
-  headline: "25–26 DE MAIO DE 2027 · BRASÍLIA/DF"
+  headline: "25 – 26 DE MAIO DE 2027 · BRASÍLIA/DF"
   links:
     - label: Quero Participar
       color: primary
@@ -56,14 +56,19 @@ terminal:
           style: success
         - text: "https://app.example.com/acme-corp"
           style: url
-logos:
-  title: Trusted by engineering teams at
+
+lastExperience:
+  headline: 1º Edição
+  title: "Em 2025, fizemos nossa estreia"
+  description: Dois dias reunindo ideias, experiências e pessoas que estão pensando o futuro do movimento sindical.
+  image:
+    src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMDidQfNIi2D4KFA1h0aqUIBdamDfja8vcRh7vWSYAREaPEqx1RVPNUIE&s=10
+    alt: "Last Experience"
   items:
-    - i-simple-icons-vercel
-    - i-simple-icons-github
-    - i-simple-icons-linear
-    - i-simple-icons-supabase
-    - i-simple-icons-stripe
+    - label: +250 Participantes
+    - label: XX palestras
+    - label: XX palestras
+
 features:
   headline: Capabilities
   title: "Every signal, one surface."

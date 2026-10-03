@@ -64,9 +64,9 @@ const { copy, copied } = useClipboard()
       orientation="horizontal"
       :ui="{
         root: 'pb-0 sm:pb-0',
-        container: 'relative z-10 lg:py-32',
+        container: 'relative z-10 lg:py-24',
         wrapper: 'flex flex-col',
-        title: 'sm:text-6xl lg:text-7xl xl:text-[80px] tracking-tighter leading-[1.05]',
+        title: 'sm:text-6xl lg:text-7xl',
         description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default',
         links: 'gap-3'
       }"
@@ -102,7 +102,7 @@ const { copy, copied } = useClipboard()
         <Motion
           as="span"
           v-bind="enterMotion(0.35)"
-          class="inline-block"
+          class="inline-block font-display"
         >
           {{ heroTitle.primary }}
           <br v-if="heroTitle.secondary">
@@ -123,7 +123,7 @@ const { copy, copied } = useClipboard()
         <Motion
           as="span"
           v-bind="enterMotion(0.5)"
-          class="inline-block"
+          class="inline-block font-display"
         >
           {{ page.description }}
         </Motion>
@@ -171,15 +171,15 @@ const { copy, copied } = useClipboard()
       </a>
     </UMarquee>
 
-    <!-- Features -->
+    <!-- Experiência 2025 -->
     <UPageSection
-      id="features"
+      id="lastExperience"
       :ui="{
-        root: 'py-24 sm:py-32 scroll-mt-(--ui-header-height)',
-        container: 'max-w-5xl',
+        root: 'scroll-mt-(--ui-header-height)',
+        container: 'max-w-5xl lg:py-24',
         headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
-        title: 'max-w-lg mx-auto',
-        description: 'max-w-md mx-auto text-dimmed'
+        title: '',
+        description: 'text-dimmed'
       }"
     >
       <template #headline>
@@ -188,7 +188,7 @@ const { copy, copied } = useClipboard()
           v-bind="scrollMotion()"
           class="inline-block"
         >
-          {{ page.features.headline }}
+          {{ page.lastExperience.headline }}
         </Motion>
       </template>
 
@@ -198,7 +198,7 @@ const { copy, copied } = useClipboard()
           v-bind="scrollMotion(0.1)"
           class="inline-block"
         >
-          {{ page.features.title }}
+          {{ page.lastExperience.title }}
         </Motion>
       </template>
 
@@ -208,23 +208,21 @@ const { copy, copied } = useClipboard()
           v-bind="scrollMotion(0.2)"
           class="inline-block"
         >
-          {{ page.features.description }}
+          {{ page.lastExperience.description }}
         </Motion>
       </template>
 
-      <div class="rounded-2xl border border-default bg-default overflow-hidden">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
+      <div class="flex flex-col lg:flex-row">
+        <img :src="page.lastExperience.image.src">
+        <div class="rounded-r-lg border border-default bg-default overflow-hidden flex lg:flex-col justify-end">
           <Motion
-            v-for="(feature, index) in page.features.items"
-            :key="feature.title"
+            v-for="(items, index) in page.lastExperience.items"
+            :key="items.label"
             v-bind="staggerMotion(index)"
           >
             <UPageCard
-              :icon="feature.icon"
-              :title="feature.title"
-              :description="feature.description"
+              :title="items.label"
               class="rounded-none duration-300"
-              to="#"
               :ui="{
                 leading: 'mb-5 flex size-9 justify-center rounded-lg bg-primary/10',
                 title: 'text-sm tracking-tight',
