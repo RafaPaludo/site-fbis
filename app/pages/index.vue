@@ -53,8 +53,6 @@ function staggerMotion(index: number = 0) {
     transition: { duration: 0.6, delay: index * 0.08 }
   }
 }
-
-const { copy, copied } = useClipboard()
 </script>
 
 <template>
@@ -141,14 +139,6 @@ const { copy, copied } = useClipboard()
           />
         </Motion>
       </template>
-
-      <Motion
-        as-child
-        v-bind="enterMotion(0.85)"
-        class="max-w-2xl mx-auto w-full"
-      >
-        <HeroTerminal :lines="page.terminal.lines" />
-      </Motion>
     </UPageHero>
 
     <!-- Marquee -->
@@ -176,7 +166,7 @@ const { copy, copied } = useClipboard()
       id="lastExperience"
       :ui="{
         root: 'scroll-mt-(--ui-header-height)',
-        container: 'max-w-5xl lg:py-24',
+        container: 'lg:py-24',
         headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
         title: '',
         description: 'text-dimmed'
@@ -232,131 +222,185 @@ const { copy, copied } = useClipboard()
           </Motion>
         </div>
       </div>
-    </UPageSection>
 
-    <!-- Metrics -->
-    <UPageSection
-      id="metrics"
-      :ui="{
-        root: 'py-24 sm:py-32 scroll-mt-(--ui-header-height)',
-        container: 'max-w-5xl',
-        headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
-        title: 'max-w-lg mx-auto',
-        description: 'max-w-md mx-auto text-dimmed'
-      }"
-    >
-      <template #headline>
-        <Motion
-          as="span"
-          v-bind="scrollMotion()"
-          class="inline-block"
+      <!-- Comentários sobre o evento -->
+      <UPageColumns>
+        <UPageCard
+          v-for="(testimonial, index) in page.lastExperience.testimonials"
+          :key="index"
+          variant="subtle"
+          :description="testimonial.quote"
+          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
-          {{ page.metrics.headline }}
-        </Motion>
-      </template>
-
-      <template #title>
-        <Motion
-          as="span"
-          v-bind="scrollMotion(0.1)"
-          class="inline-block"
-        >
-          {{ page.metrics.title }}
-        </Motion>
-      </template>
-
-      <template #description>
-        <Motion
-          as="span"
-          v-bind="scrollMotion(0.2)"
-          class="inline-block"
-        >
-          {{ page.metrics.description }}
-        </Motion>
-      </template>
-
-      <div class="rounded-2xl border border-default bg-default overflow-hidden">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px">
-          <Motion
-            v-for="(metric, index) in page.metrics.items"
-            :key="metric.label"
-            v-bind="staggerMotion(index)"
-          >
-            <UPageCard
-              :title="metric.value"
-              :description="metric.label"
-              class="rounded-none duration-300"
-              to="#"
-              :ui="{
-                root: 'text-center',
-                wrapper: 'items-center',
-                title: ['text-4xl font-bold tracking-tight leading-none', metric.class],
-                description: 'font-mono text-xs uppercase tracking-[0.06em] text-dimmed mt-3'
-              }"
+          <template #footer>
+            <UUser
+              v-bind="testimonial"
+              size="xl"
             />
-          </Motion>
-        </div>
-      </div>
+          </template>
+        </UPageCard>
+      </UPageColumns>
     </UPageSection>
 
-    <!-- CTA -->
-    <UPageCTA
-      variant="naked"
+    <!-- FBIS 2027 -->
+    <UPageSection
+      id="fbis"
       :ui="{
-        root: 'py-24 sm:py-32',
-        container: 'max-w-3xl text-center',
-        title: 'lg:text-5xl tracking-tighter whitespace-pre-line',
-        description: 'mx-auto max-w-sm leading-relaxed text-dimmed'
+        root: 'scroll-mt-(--ui-header-height)',
+        container: 'lg:py-24',
+        headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
+        title: '',
+        description: 'text-dimmed'
       }"
     >
-      <template #top>
-        <GradientGlow class="bottom-0 w-2/3 h-1/2" />
-      </template>
-
       <template #title>
         <Motion
           as="span"
-          v-bind="scrollMotion()"
+          v-bind="scrollMotion(0.1)"
           class="inline-block"
         >
-          {{ page.cta.title }}
+          {{ page.fbis.title }}
         </Motion>
       </template>
 
       <template #description>
         <Motion
           as="span"
+          v-bind="scrollMotion(0.2)"
+          class="inline-block"
+        >
+          {{ page.fbis.description }}
+        </Motion>
+      </template>
+
+      <Motion
+        as="span"
+        v-bind="scrollMotion(0.1)"
+        class="inline-block"
+      >
+        <p>{{ page.fbis.paragraph }}</p>
+      </Motion>
+
+      <Motion
+        as="span"
+        v-bind="scrollMotion(0.1)"
+        class="inline-block"
+      >
+        <img
+          :src="page.fbis.image.src"
+          :alt="page.fbis.image.alt"
+          class="mx-auto rounded-lg"
+        >
+      </Motion>
+    </UPageSection>
+
+    <!-- Porque participar -->
+    <UPageSection
+      id="whyParticipate"
+      :ui="{
+        root: 'scroll-mt-(--ui-header-height)',
+        container: 'lg:py-24',
+        headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
+        title: '',
+        description: 'text-dimmed'
+      }"
+    >
+      <template #title>
+        <Motion
+          as="span"
           v-bind="scrollMotion(0.1)"
           class="inline-block"
         >
-          {{ page.cta.description }}
+          {{ page.whyParticipate.title }}
         </Motion>
       </template>
 
-      <template #links>
+      <template #description>
         <Motion
-          class="flex flex-col items-center justify-center gap-6"
+          as="span"
           v-bind="scrollMotion(0.2)"
+          class="inline-block"
         >
-          <UButton
-            v-for="link in page.cta.links"
-            :key="link.label"
-            v-bind="link"
-            size="xl"
-          />
-
-          <UButton
-            :label="page.cta.command"
-            :trailing-icon="copied ? 'i-lucide-copy-check' : 'i-lucide-copy'"
-            color="neutral"
-            variant="subtle"
-            class="font-mono font-light text-toned gap-4"
-            size="xl"
-            :ui="{ trailingIcon: 'size-5' }"
-            @click="copy(page.cta.command)"
-          />
+          {{ page.whyParticipate.description }}
         </Motion>
       </template>
-    </UPageCTA>
+
+      <Motion
+        v-for="(item, index) in page.whyParticipate.items"
+        :key="item.label"
+        v-bind="staggerMotion(index)"
+      >
+        <UPageFeature
+          :title="item.label"
+          :description="item.description"
+          icon="i-lucide-swatch-book"
+          class="rounded-none duration-300"
+          :ui="{
+            leading: 'mb-5 flex size-9 justify-center rounded-lg bg-primary/10',
+            title: 'text-sm tracking-tight',
+            description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed'
+          }"
+        />
+      </Motion>
+    </UPageSection>
+
+    <!-- Quem estará no FBIS -->
+    <UPageSection
+      id="fbisSpeakers"
+      :ui="{
+        root: 'scroll-mt-(--ui-header-height)',
+        container: 'lg:py-24',
+        headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
+        title: '',
+        description: 'text-dimmed'
+      }"
+    >
+      <template #title>
+        <Motion
+          as="span"
+          v-bind="scrollMotion(0.1)"
+          class="inline-block"
+        >
+          {{ page.fbisSpeakers.title }}
+        </Motion>
+      </template>
+
+      <template #description>
+        <Motion
+          as="span"
+          v-bind="scrollMotion(0.2)"
+          class="inline-block"
+        >
+          {{ page.fbisSpeakers.description }}
+        </Motion>
+      </template>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Motion
+          v-for="(speaker, index) in page.fbisSpeakers.speakers"
+          :key="speaker.name"
+          v-bind="staggerMotion(index)"
+        >
+          <UPageCard
+            :title="speaker.name"
+            :description="speaker.bio"
+            reverse
+            class="duration-300"
+            :ui="{
+              leading: 'mb-5 justify-center rounded-lg bg-primary/10',
+              title: 'text-sm tracking-tight',
+              description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed'
+            }"
+          >
+            <img
+              :src="speaker.image.src"
+              :alt="speaker.image.alt"
+            >
+          </UPageCard>
+        </Motion>
+      </div>
+
+      <!-- Adicionar um carrossel com os demais participantes -->
+    </UPageSection>
   </div>
 </template>
