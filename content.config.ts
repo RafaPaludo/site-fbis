@@ -23,43 +23,61 @@ export const collections = {
         headline: z.string().optional(),
         links: z.array(createLinkSchema())
       }),
-      terminal: z.object({
-        lines: z.array(z.object({
-          segments: z.array(z.object({
-            text: z.string(),
-            style: z.string()
-          }))
-        }))
+      marquee: z.object({
+        label: z.string(),
+        link: z.string().optional()
       }),
-      logos: z.object({
-        title: z.string().nonempty(),
-        items: z.array(z.string())
-      }),
-      features: z.object({
+      lastExperience: z.object({
         headline: z.string().optional(),
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        image: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().nonempty()
+        }),
         items: z.array(z.object({
-          icon: z.string(),
-          title: z.string().nonempty(),
+          label: z.string()
+        })),
+        testimonials: z.array(z.object({
+          name: z.string().nonempty(),
+          description: z.string().nonempty(),
+          quote: z.string().nonempty(),
+          avatar: z.object({
+            src: z.string().nonempty(),
+            alt: z.string().nonempty(),
+            loading: z.enum(['lazy', 'eager']).default('lazy')
+          })
+        }))
+      }),
+      fbis: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        paragraph: z.string().nonempty(),
+        image: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().nonempty()
+        })
+      }),
+      whyParticipate: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(z.object({
+          label: z.string(),
           description: z.string().nonempty()
         }))
       }),
-      metrics: z.object({
-        headline: z.string().optional(),
+      fbisSpeakers: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        items: z.array(z.object({
-          value: z.string().nonempty(),
-          label: z.string().nonempty(),
-          class: z.string().nonempty()
+        speakers: z.array(z.object({
+          name: z.string().nonempty(),
+          org: z.string().nonempty(),
+          bio: z.string().nonempty(),
+          image: z.object({
+            src: z.string().nonempty(),
+            alt: z.string().nonempty()
+          })
         }))
-      }),
-      cta: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        command: z.string().nonempty(),
-        links: z.array(createLinkSchema())
       })
     })
   })

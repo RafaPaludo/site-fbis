@@ -7,16 +7,34 @@ const activeSection = ref<string>()
 
 const items = computed(() => [
   {
-    label: 'Features',
-    to: '#features',
+    label: 'O evento',
+    to: '#event',
     exactHash: true,
-    active: activeSection.value === 'features'
+    active: activeSection.value === 'event'
   },
   {
-    label: 'Metrics',
-    to: '#metrics',
+    label: 'Experiência 2025',
+    to: '#lastExperience',
     exactHash: true,
-    active: activeSection.value === 'metrics'
+    active: activeSection.value === 'lastExperience'
+  },
+  {
+    label: 'Programação',
+    to: '#programmation',
+    exactHash: true,
+    active: activeSection.value === 'programmation'
+  },
+  {
+    label: 'Palestrantes',
+    to: '#speakers',
+    exactHash: true,
+    active: activeSection.value === 'speakers'
+  },
+  {
+    label: 'Patrocinadores',
+    to: '#sponsors',
+    exactHash: true,
+    active: activeSection.value === 'sponsors'
   }
 ])
 
@@ -30,7 +48,7 @@ nuxtApp.hooks.hookOnce('page:loading:end', () => {
     }
   }, { rootMargin: '-50% 0px -50% 0px' })
 
-  document.querySelectorAll('#features, #metrics').forEach(el => observer.observe(el))
+  document.querySelectorAll('#event, #lastExperience, #speakers, #sponsors').forEach(el => observer.observe(el))
 })
 
 const variants: Record<string, VariantType | ((custom: unknown) => VariantType)> = {
@@ -64,8 +82,6 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
       >
         <AppLogo class="h-6 w-auto shrink-0" />
       </NuxtLink>
-
-      <TemplateMenu />
     </template>
 
     <UNavigationMenu
@@ -75,16 +91,10 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
 
     <template #right>
       <UButton
-        label="Sign in"
-        color="neutral"
-        variant="ghost"
+        label="Garanta sua vaga"
+        color="primary"
         class="hidden lg:flex"
-      />
-      <UButton
-        label="Get started"
-        color="neutral"
-        class="hidden lg:flex"
-        to="https://ui.nuxt.com"
+        to="https://wa.me/5548991218168?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FBIS%202027"
         target="_blank"
       />
     </template>
@@ -95,7 +105,7 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
         variant="ghost"
         color="neutral"
         square
-        :aria-label="open ? 'Close navigation' : 'Open navigation'"
+        :aria-label="open ? 'Fechar navegação' : 'Abrir navegação'"
         :aria-expanded="open"
         :class="ui.toggle({ toggleSide: 'right' })"
         @click="toggle"
@@ -152,15 +162,9 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
 
       <div class="mt-4 flex flex-col gap-2">
         <UButton
-          label="Sign in"
-          color="neutral"
-          variant="soft"
+          label="Garanta sua vaga"
           block
-        />
-        <UButton
-          label="Get started"
-          block
-          to="https://ui.nuxt.com"
+          to="https://wa.me/5548991218168?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FBIS%202027"
           target="_blank"
         />
       </div>
