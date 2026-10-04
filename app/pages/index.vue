@@ -3,6 +3,7 @@ import HeroSection from '~/ui-features/home/HeroSection.vue'
 import MarqueeSection from '~/ui-features/home/MarqueeSection.vue'
 import LastExperienceSection from '~/ui-features/home/LastExperienceSection.vue'
 import FbisSection from '~/ui-features/home/FbisSection.vue'
+import ManifestoSection from '~/ui-features/home/ManifestoSection.vue'
 import WhyParticipateSection from '~/ui-features/home/WhyParticipateSection.vue'
 import SpeakersSection from '~/ui-features/home/SpeakersSection.vue'
 
@@ -29,5 +30,6 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <FbisSection :page="page" />
     <WhyParticipateSection :page="page" />
     <SpeakersSection :page="page" />
+    <ManifestoSection :page="page" />
   </main>
 </template>
