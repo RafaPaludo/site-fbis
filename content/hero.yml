@@ -1,0 +1,7 @@
+hero:
+  headline: "25 - 26 DE MAIO DE 2027 · BRASÍLIA/DF"
+  links:
+    - label: Quero Participar
+      color: primary
+      size: xl
+      to: '#'
