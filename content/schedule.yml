@@ -1,0 +1,39 @@
+schedule:
+  title: Programação
+  days:
+    - id: day-25
+      label: 25/05/2027
+      activities:
+        - time: "09:00"
+          stage: Palco 1
+          title: Abertura
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Apresentação do encontro e boas-vindas às lideranças participantes."
+          speaker: "Nome do palestrante"
+        - time: "10:30"
+          stage: Palco 1
+          title: Comunicação sindical em transformação
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus."
+          speaker: "Nome do palestrante"
+        - time: "14:00"
+          stage: Palco 2
+          title: Tecnologia, trabalho e novas possibilidades
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Uma conversa sobre cenários, desafios e caminhos possíveis."
+          speaker: "Nome do palestrante"
+    - id: day-26
+      label: 26/05/2027
+      activities:
+        - time: "09:30"
+          stage: Palco 1
+          title: Saúde mental e relações de trabalho
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Discussão sobre cuidado, escuta e ambientes de trabalho."
+          speaker: "Nome do palestrante"
+        - time: "11:00"
+          stage: Palco 2
+          title: Financiamento e organização sindical
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Novas perguntas para fortalecer a atuação coletiva."
+          speaker: "Nome do palestrante"
+        - time: "15:00"
+          stage: Palco 1
+          title: Estratégia para o futuro dos sindicatos
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Encerramento com troca de experiências e perspectivas."
+          speaker: "Nome do palestrante"
