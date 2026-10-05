@@ -1,0 +1,11 @@
+organizationInfo:
+  groupRegistration:
+    title: "Quer levar mais pessoas da sua organização?"
+    description: "O FBIS também foi pensado para proporcionar uma experiência coletiva. Converse com nossa equipe sobre inscrições para grupos e organizações."
+    buttonLabel: "Falar com a equipe"
+    buttonTo: "https://api.whatsapp.com/send/?phone=5548991218168&text=Ol%C3%A1%21+Quero+saber+mais+sobre+inscri%C3%A7%C3%B5es+para+grupos+no+FBIS+2027&type=phone_number&app_absent=0"
+  presentation:
+    title: "Precisa apresentar o FBIS para sua diretoria?"
+    description: "Preparamos um material com informações sobre o evento, programação, benefícios e investimento para ajudar sua organização a avaliar a participação."
+    buttonLabel: "Baixar apresentação do FBIS"
+    downloadUrl: ""

@@ -6,6 +6,7 @@ import FbisSection from '~/ui-features/home/FbisSection.vue'
 import ManifestoSection from '~/ui-features/home/ManifestoSection.vue'
 import Themes2027Section from '~/ui-features/home/Themes2027Section.vue'
 import ScheduleSection from '~/ui-features/home/ScheduleSection.vue'
+import OrganizationInfoSection from '~/ui-features/home/OrganizationInfoSection.vue'
 import WhyParticipateSection from '~/ui-features/home/WhyParticipateSection.vue'
 import SpeakersSection from '~/ui-features/home/SpeakersSection.vue'
 
@@ -35,5 +36,6 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <ManifestoSection :page="page" />
     <Themes2027Section :page="page" />
     <ScheduleSection :page="page" />
+    <OrganizationInfoSection :page="page" />
   </main>
 </template>
