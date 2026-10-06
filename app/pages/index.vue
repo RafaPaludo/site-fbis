@@ -9,6 +9,7 @@ import ScheduleSection from '~/ui-features/home/ScheduleSection.vue'
 import OrganizationInfoSection from '~/ui-features/home/OrganizationInfoSection.vue'
 import SponsorsSection from '~/ui-features/home/SponsorsSection.vue'
 import LocationSection from '~/ui-features/home/LocationSection.vue'
+import FaqSection from '~/ui-features/home/FaqSection.vue'
 import WhyParticipateSection from '~/ui-features/home/WhyParticipateSection.vue'
 import SpeakersSection from '~/ui-features/home/SpeakersSection.vue'
 
@@ -41,5 +42,6 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <OrganizationInfoSection :page="page" />
     <SponsorsSection :page="page" />
     <LocationSection :page="page" />
+    <FaqSection :page="page" />
   </main>
 </template>

@@ -1,0 +1,18 @@
+faq:
+  title: "Perguntas frequentes"
+  items:
+    - id: what-is-fbis
+      question: "O que é o FBIS?"
+      answer: "O Fórum Brasileiro de Inovação Sindical é um encontro nacional que reúne organizações e lideranças para compartilhar experiências, discutir inovação e construir novos caminhos para o movimento sindical."
+    - id: event-date
+      question: "Quando acontece o FBIS 2027?"
+      answer: "O evento acontece nos dias 25 e 26 de maio de 2027."
+    - id: event-location
+      question: "Onde será realizado?"
+      answer: "O FBIS 2027 será em Brasília, no Distrito Federal. O nome e o endereço do local ainda não foram informados."
+    - id: event-topics
+      question: "Quais temas serão discutidos?"
+      answer: "Entre os temas previstos estão comunicação, tecnologia e inteligência artificial; direito sindical e financiamento; saúde mental e trabalho; estratégia e futuro dos sindicatos."
+    - id: group-registration
+      question: "Posso participar com outras pessoas da minha organização?"
+      answer: "Sim. O evento foi pensado também para uma experiência coletiva. Entre em contato com a equipe do FBIS para conversar sobre inscrições para grupos e organizações."
