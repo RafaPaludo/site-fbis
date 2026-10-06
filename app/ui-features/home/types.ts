@@ -6,6 +6,8 @@ type OrganizationInfo = {
   groupRegistration: { title: string, description: string, buttonLabel: string, buttonTo: string }
   presentation: { title: string, description: string, buttonLabel: string, downloadUrl: string }
 }
+type SponsorLogo = { id: string, src: string, alt: string }
+type Sponsors = { title: string, buttonLabel: string, buttonTo: string, logos: SponsorLogo[] }
 
 export type HomePageContent = {
   title: string
@@ -25,6 +27,7 @@ export type HomePageContent = {
   themes2027: { headline: string, title: string, description: string, items: ThemeContent[] }
   schedule: { title: string, days: ScheduleDay[] }
   organizationInfo: OrganizationInfo
+  sponsors: Sponsors
   whyParticipate: { title: string, description: string, items: Array<{ label: string, description: string }> }
   fbisSpeakers: { title: string, description: string, speakers: Array<{ name: string, bio: string, image: ImageContent }> }
   seo?: { title?: string, description?: string }
