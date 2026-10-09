@@ -44,19 +44,14 @@ defineProps<{ page: HomePageContent }>()
           aria-hidden="true"
           class="pointer-events-none col-start-1 row-start-1 h-[min(80vh,640px)] aspect-[9/16] translate-x-5 translate-y-5 rotate-16 rounded-lg bg-fbis-yellow-soft lg:block"
         />
-        <video
-          class="relative z-10 col-start-1 row-start-1 mx-auto h-[min(80vh,640px)] aspect-[9/16] max-w-full rounded-lg bg-black object-contain"
-          controls
-          playsinline
-          preload="metadata"
-          aria-label="Aftermovie do FBIS"
-        >
-          <source
-            src="/videos/FBIS%20(Aftermovie-Reels).mp4"
-            type="video/mp4"
-          >
-          Seu navegador não oferece suporte à reprodução de vídeo.
-        </video>
+        <iframe
+          class="relative z-10 col-start-1 row-start-1 mx-auto h-[min(80vh,640px)] aspect-[9/16] max-w-full rounded-lg bg-black"
+          :src="page.lastExperience.video.src"
+          :title="page.lastExperience.video.title"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        />
       </div>
       <div class="flex w-full flex-col justify-center gap-8 px-4 py-6 lg:w-auto lg:px-0 relative">
         <Motion

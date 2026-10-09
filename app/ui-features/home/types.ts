@@ -21,7 +21,7 @@ export type HomePageContent = {
     headline: string
     title: string
     description: string
-    image: ImageContent
+    video: { src: string, title: string }
     items: Array<{ label: string }>
     testimonials: Array<Record<string, unknown> & { quote: string }>
   }
