@@ -7,14 +7,16 @@ defineProps<{ page: HomePageContent }>()
 
 <template>
   <UPageSection
-    id="fbis"
-    :ui="{ root: 'scroll-mt-(--ui-header-height)', container: 'lg:py-24', headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center', title: '', description: 'text-dimmed' }"
+    id="evento"
+    orientation="horizontal"
+    :ui="{
+      container: 'lg:items-start'
+    }"
   >
     <template #title>
       <Motion
         as="span"
         v-bind="scrollMotion(0.1)"
-        class="inline-block"
       >
         {{ page.fbis.title }}
       </Motion>
@@ -23,28 +25,49 @@ defineProps<{ page: HomePageContent }>()
       <Motion
         as="span"
         v-bind="scrollMotion(0.2)"
-        class="inline-block"
       >
         {{ page.fbis.description }}
       </Motion>
     </template>
-    <Motion
-      as="span"
-      v-bind="scrollMotion(0.1)"
-      class="inline-block"
-    >
-      <p>{{ page.fbis.paragraph }}</p>
-    </Motion>
-    <Motion
-      as="span"
-      v-bind="scrollMotion(0.1)"
-      class="inline-block"
-    >
-      <img
-        :src="page.fbis.image.src"
-        :alt="page.fbis.image.alt"
-        class="mx-auto rounded-lg"
+    <template #features>
+      <div class="flex flex-col justify-start">
+        <Motion
+          as="div"
+          v-bind="scrollMotion(0.3)"
+          class="space-y-4 text-lg leading-relaxed text-default"
+        >
+          <p
+            v-for="(paragraph, index) in page.fbis.paragraph"
+            :key="index"
+          >
+            {{ paragraph }}
+          </p>
+        </Motion>
+      </div>
+    </template>
+
+    <div class="flex gap-4 flex-col">
+      <Motion
+        v-for="(image, index) in page.fbis.images"
+        :key="image.src"
+        v-bind="scrollMotion((index + 1) * 0.08)"
       >
-    </Motion>
+        <UPageCard
+          variant="outline"
+          class="w-full overflow-hidden"
+          :ui="{
+            container: 'relative flex flex-col flex-1 sm:p-0'
+          }"
+        >
+          <img
+            :src="image.src"
+            :alt="image.alt"
+            class="block aspect-video w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          >
+        </UPageCard>
+      </Motion>
+    </div>
   </UPageSection>
 </template>

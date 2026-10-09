@@ -13,11 +13,11 @@ defineProps<{ page: HomePageContent }>()
       }"
     >
       <UPageSection
-        id="group-registration"
+        id="inscricao-em-grupo"
         :ui="{
           root: 'h-full',
           container: '',
-          title: 'text-left text-2xl font-semibold text-fbis-blue md:text-3xl',
+          title: 'text-left text-2xl font-semibold md:text-3xl',
           description: 'text-left text-fbis-gray',
           links: 'mt-6 justify-start'
         }"
@@ -52,11 +52,11 @@ defineProps<{ page: HomePageContent }>()
       </UPageSection>
 
       <UPageSection
-        id="fbis-presentation"
+        id="apresentacao-fbis"
         :ui="{
           root: 'h-full',
           container: '',
-          title: 'text-left text-2xl font-semibold text-fbis-blue md:text-3xl',
+          title: 'text-left text-2xl font-semibold md:text-3xl',
           description: 'text-left text-fbis-gray',
           links: 'mt-6 justify-start'
         }"

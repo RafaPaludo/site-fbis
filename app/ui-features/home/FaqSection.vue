@@ -12,7 +12,7 @@ const items = computed(() => props.page.faq.items.map(item => ({
 
 <template>
   <UPageSection
-    id="faq"
+    id="perguntas-frequentes"
     :ui="{
       root: 'scroll-mt-(--ui-header-height)',
       container: 'lg:py-24',

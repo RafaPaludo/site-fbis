@@ -7,5 +7,5 @@ hero:
       to: '#'
       trailingIcon: i-lucide-arrow-up-right
   image:
-    src: https://images.unsplash.com/photo-1492684223066-81342ee5ff30?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXZlbnRvc3xlbnwwfHwwfHx8MA%3D%3D
+    src: /images/hero/hero_1_fbis.jpg
     alt: FBIS 2027

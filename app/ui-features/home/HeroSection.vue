@@ -6,6 +6,9 @@ const title = computed(() => {
   const [primary = '', ...parts] = (props.page.title ?? '').split('\n')
   return { primary, secondary: parts.join(' ').trim() }
 })
+const heroBackground = computed(() => ({
+  backgroundImage: `linear-gradient(90deg, rgba(11, 23, 42, 0.92) 0%, rgba(11, 23, 42, 0.78) 55%, rgba(11, 23, 42, 0.55) 100%), url("${props.page.hero.image.src}")`
+}))
 
 function enterMotion(delay = 0) {
   return { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay } }
@@ -14,22 +17,21 @@ function enterMotion(delay = 0) {
 
 <template>
   <UPageHero
-    orientation="horizontal"
-    :ui="{ root: 'pb-0 sm:pb-0', container: 'relative z-10 lg:py-16', wrapper: 'flex flex-col', title: 'sm:text-6xl lg:text-7xl', description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default', links: 'gap-3' }"
+    :ui="{ root: 'relative isolate overflow-hidden bg-cover bg-center bg-no-repeat pb-0 sm:pb-0', container: 'relative z-10 lg:py-40', wrapper: 'flex flex-col', title: 'text-white sm:text-6xl lg:text-7xl', description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-white/95', links: 'gap-3' }"
+    :style="heroBackground"
   >
     <template #top>
       <Motion v-bind="{ initial: { opacity: 0 }, whileInView: { opacity: 1 }, inViewOptions: { once: true }, transition: { duration: 0.6 } }">
         <HeroShaders class="absolute top-0 inset-x-0 opacity-15 h-full" />
       </Motion>
-      <GradientGlow class="top-0 w-2/3 h-1/2" />
     </template>
     <template #headline>
       <Motion v-bind="enterMotion(0.2)">
         <UBadge
           color="neutral"
-          variant="soft"
+          variant="subtle"
           :label="page.hero.headline"
-          class="rounded-full px-3 py-1.5 gap-1.5 bg-primary/5 backdrop-blur-sm"
+          class="rounded-full px-3 py-1.5 gap-1.5 bg-white/95 text-fbis-blue backdrop-blur-sm"
         >
           <template #leading>
             <UChip
@@ -50,8 +52,7 @@ function enterMotion(delay = 0) {
         {{ title.primary }}<br v-if="title.secondary">
         <span
           v-if="title.secondary"
-          class="animate-shimmer bg-size-[200%_auto] bg-clip-text text-transparent"
-          :style="{ backgroundImage: 'linear-gradient(135deg, var(--color-primary-400), var(--color-primary-300), var(--color-primary-200), var(--color-primary-100), var(--color-primary-200), var(--color-primary-300), var(--color-primary-400))', animationDuration: '10s' }"
+          class="text-fbis-yellow"
         >{{ title.secondary }}</span>
       </Motion>
     </template>
@@ -76,11 +77,5 @@ function enterMotion(delay = 0) {
         />
       </Motion>
     </template>
-
-    <img
-      :src="page.hero.image.src"
-      :alt="page.hero.image.alt"
-      class="mx-auto rounded-lg"
-    >
   </UPageHero>
 </template>

@@ -7,34 +7,34 @@ const activeSection = ref<string>()
 
 const items = computed(() => [
   {
-    label: 'O evento',
-    to: '#event',
+    label: 'Experiência 2025',
+    to: '#experiencia-2025',
     exactHash: true,
-    active: activeSection.value === 'event'
+    active: activeSection.value === 'experiencia-2025'
   },
   {
-    label: 'Experiência 2025',
-    to: '#lastExperience',
+    label: 'O evento',
+    to: '#evento',
     exactHash: true,
-    active: activeSection.value === 'lastExperience'
+    active: activeSection.value === 'evento'
   },
   {
     label: 'Programação',
-    to: '#programmation',
+    to: '#programacao',
     exactHash: true,
-    active: activeSection.value === 'programmation'
+    active: activeSection.value === 'programacao'
   },
   {
     label: 'Palestrantes',
-    to: '#speakers',
+    to: '#palestrantes',
     exactHash: true,
-    active: activeSection.value === 'speakers'
+    active: activeSection.value === 'palestrantes'
   },
   {
     label: 'Patrocinadores',
-    to: '#sponsors',
+    to: '#patrocinadores',
     exactHash: true,
-    active: activeSection.value === 'sponsors'
+    active: activeSection.value === 'patrocinadores'
   }
 ])
 
@@ -48,7 +48,7 @@ nuxtApp.hooks.hookOnce('page:loading:end', () => {
     }
   }, { rootMargin: '-50% 0px -50% 0px' })
 
-  document.querySelectorAll('#event, #lastExperience, #speakers, #sponsors').forEach(el => observer.observe(el))
+  document.querySelectorAll('#evento, #experiencia-2025, #programacao, #palestrantes, #patrocinadores').forEach(el => observer.observe(el))
 })
 
 const variants: Record<string, VariantType | ((custom: unknown) => VariantType)> = {
@@ -97,7 +97,7 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
         to="https://wa.me/5548991218168?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FBIS%202027"
         target="_blank"
         trailing-icon="i-lucide-arrow-up-right"
-        size="xl"
+        size="lg"
       />
     </template>
 

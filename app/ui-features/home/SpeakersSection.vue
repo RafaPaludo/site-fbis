@@ -8,14 +8,12 @@ defineProps<{ page: HomePageContent }>()
 
 <template>
   <UPageSection
-    id="fbisSpeakers"
-    :ui="{ root: 'scroll-mt-(--ui-header-height)', container: 'lg:py-24', headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center', title: '', description: 'text-dimmed' }"
+    id="palestrantes"
   >
     <template #title>
       <Motion
         as="span"
         v-bind="scrollMotion(0.1)"
-        class="inline-block"
       >
         {{ page.fbisSpeakers.title }}
       </Motion>
@@ -24,7 +22,6 @@ defineProps<{ page: HomePageContent }>()
       <Motion
         as="span"
         v-bind="scrollMotion(0.2)"
-        class="inline-block"
       >
         {{ page.fbisSpeakers.description }}
       </Motion>
@@ -40,13 +37,8 @@ defineProps<{ page: HomePageContent }>()
           :description="speaker.bio"
           reverse
           class="duration-300"
-          :ui="{ leading: 'mb-5 justify-center rounded-lg bg-primary/10', title: 'text-sm tracking-tight', description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed' }"
-        >
-          <img
-            :src="speaker.image.src"
-            :alt="speaker.image.alt"
-          >
-        </UPageCard>
+          :ui="{ leading: 'mb-5 justify-center rounded-lg bg-primary/10', title: 'text-sm tracking-tight', description: 'line-clamp-3 text-sm leading-relaxed text-dimmed' }"
+        />
       </Motion>
     </div>
   </UPageSection>

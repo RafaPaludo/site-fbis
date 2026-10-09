@@ -8,7 +8,7 @@ defineProps<{ page: HomePageContent }>()
 
 <template>
   <UPageSection
-    id="location"
+    id="localizacao"
     :ui="{
       root: 'scroll-mt-(--ui-header-height)',
       container: 'lg:py-24',

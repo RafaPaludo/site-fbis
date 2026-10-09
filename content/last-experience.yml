@@ -7,27 +7,18 @@ lastExperience:
     title: Aftermovie da primeira edição do FBIS
   items:
     - label: +250 Participantes
-    - label: XX palestras
-    - label: XX palestras
+    - label: 47 Entidades Sindicais
+    - label: 36 Oficinas Práticas
   testimonials:
-    - name: 'Evan You'
-      description: 'Author of Vue.js and Vite'
-      quote: 'Nuxt on Cloudflare infra with minimal effort - this is huge!'
-      avatar:
-        src: 'https://avatars.githubusercontent.com/u/499550?v=4'
-        alt: 'Evan You'
-        loading: 'lazy'
-    - name: 'Igor Minar'
-      description: 'Software Engineer at Cloudflare'
-      quote: 'I love the polish and the batteries-included approach. NuxtHub takes web framework and hosting integration to a new level!'
-      avatar:
-        src: 'https://avatars.githubusercontent.com/u/216296?v=4'
-        alt: 'Igor Minar'
-        loading: 'lazy'
-    - name: 'Igor Minar'
-      description: 'Software Engineer at Cloudflare'
-      quote: 'I love the polish and the batteries-included approach. NuxtHub takes web framework and hosting integration to a new level!'
-      avatar:
-        src: 'https://avatars.githubusercontent.com/u/216296?v=4'
-        alt: 'Igor Minar'
-        loading: 'lazy'
+    - name: 'Dirigente sindical'
+      description: 'Depoimento sugerido · validar com participante'
+      quote: >-
+        O FBIS abriu espaço para trocar experiências com pessoas que enfrentam desafios parecidos e voltar para a minha organização com novas ideias.
+    - name: 'Representante de entidade'
+      description: 'Depoimento sugerido · validar com participante'
+      quote: >-
+        As conversas sobre as mudanças no mundo do trabalho ajudaram a enxergar novos caminhos para fortalecer a atuação sindical.
+    - name: 'Profissional de relações do trabalho'
+      description: 'Depoimento sugerido · validar com participante'
+      quote: >-
+        Saí do encontro com mais repertório, novas conexões e vontade de transformar o que discutimos em iniciativas concretas.

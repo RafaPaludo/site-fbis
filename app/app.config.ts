@@ -8,7 +8,11 @@ export default defineAppConfig({
 
     pageSection: {
       slots: {
-        container: 'sm:gap-8'
+        root: 'scroll-mt-(--ui-header-height)',
+        container: 'sm:gap-8 lg:py-24',
+        headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
+        title: 'text-blue-950',
+        description: 'text-dimmed'
       }
     },
 

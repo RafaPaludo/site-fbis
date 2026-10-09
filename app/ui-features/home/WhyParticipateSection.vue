@@ -8,14 +8,12 @@ defineProps<{ page: HomePageContent }>()
 
 <template>
   <UPageSection
-    id="whyParticipate"
-    :ui="{ root: 'scroll-mt-(--ui-header-height)', container: 'lg:py-24', headline: 'font-display font-medium text-xs text-primary uppercase tracking-[0.12em] text-center', title: 'font-display', description: 'text-dimmed' }"
+    id="por-que-participar"
   >
     <template #title>
       <Motion
         as="span"
         v-bind="scrollMotion(0.1)"
-        class="inline-block"
       >
         {{ page.whyParticipate.title }}
       </Motion>
@@ -24,7 +22,6 @@ defineProps<{ page: HomePageContent }>()
       <Motion
         as="span"
         v-bind="scrollMotion(0.2)"
-        class="inline-block"
       >
         {{ page.whyParticipate.description }}
       </Motion>
@@ -39,7 +36,6 @@ defineProps<{ page: HomePageContent }>()
         <UPageCard
           :title="item.label"
           :description="item.description"
-          icon="i-lucide-swatch-book"
           class="duration-300"
           variant="soft"
           :ui="{
@@ -47,7 +43,11 @@ defineProps<{ page: HomePageContent }>()
             title: 'text-lg tracking-tight font-display',
             description: 'text-sm leading-relaxed text-dimmed'
           }"
-        />
+        >
+          <template #leading>
+            <span class="font-display text-xl font-bold text-primary">{{ index + 1 }}</span>
+          </template>
+        </UPageCard>
       </Motion>
     </UPageGrid>
   </UPageSection>

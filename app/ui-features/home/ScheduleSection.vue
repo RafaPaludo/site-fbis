@@ -12,12 +12,7 @@ const tabs = computed(() => props.page.schedule.days.map(day => ({
 
 <template>
   <UPageSection
-    id="schedule"
-    :ui="{
-      root: 'scroll-mt-(--ui-header-height)',
-      container: 'lg:py-24',
-      title: 'text-left'
-    }"
+    id="programacao"
   >
     <template #title>
       <Motion

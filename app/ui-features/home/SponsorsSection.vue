@@ -7,26 +7,32 @@ defineProps<{ page: HomePageContent }>()
 
 <template>
   <UPageSection
-    id="sponsors"
+    id="patrocinadores"
     :ui="{
-      root: 'scroll-mt-(--ui-header-height)',
-      container: 'py-20 md:py-24 lg:py-32'
+      wrapper: 'w-full flex-col md:flex-row md:items-center md:justify-between',
+      title: 'text-left',
+      links: 'mt-0 justify-end'
     }"
   >
-    <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-      <Motion v-bind="scrollMotion()">
-        <h2 class="font-display text-3xl font-semibold tracking-tight text-fbis-blue md:text-4xl">
-          {{ page.sponsors.title }}
-        </h2>
-      </Motion>
-      <UButton
-        :to="page.sponsors.buttonTo"
-        target="_blank"
-        rel="noopener noreferrer"
+    <template #title>
+      <Motion
+        as="span"
+        v-bind="scrollMotion()"
+        class="flex justify-between"
       >
-        {{ page.sponsors.buttonLabel }}
-      </UButton>
-    </div>
+        {{ page.sponsors.title }}
+
+        <UButton
+          :to="page.sponsors.buttonTo"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outline"
+          class="font-sans"
+        >
+          {{ page.sponsors.buttonLabel }}
+        </UButton>
+      </Motion>
+    </template>
 
     <UMarquee
       pause-on-hover

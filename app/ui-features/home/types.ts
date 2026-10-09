@@ -25,7 +25,7 @@ export type HomePageContent = {
     items: Array<{ label: string }>
     testimonials: Array<Record<string, unknown> & { quote: string }>
   }
-  fbis: { title: string, description: string, paragraph: string, image: ImageContent }
+  fbis: { title: string, description: string, paragraph: string[], images: ImageContent[] }
   manifesto: { title: string }
   themes2027: { headline: string, title: string, description: string, items: ThemeContent[] }
   schedule: { title: string, days: ScheduleDay[] }
@@ -34,6 +34,6 @@ export type HomePageContent = {
   location: LocationContent
   faq: FaqContent
   whyParticipate: { title: string, description: string, items: Array<{ label: string, description: string }> }
-  fbisSpeakers: { title: string, description: string, speakers: Array<{ name: string, bio: string, image: ImageContent }> }
+  fbisSpeakers: { title: string, description: string, speakers: Array<{ name: string, bio: string }> }
   seo?: { title?: string, description?: string }
 }

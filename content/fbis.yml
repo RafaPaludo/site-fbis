@@ -1,7 +1,11 @@
 fbis:
   title: O que é o FBIS?
-  description: O mundo do trabalho está mudando. O movimento sincidal também.
-  paragraph: "Novas tecnologias, novas formas de comunicação e transformações na sociedade estão criando desafios — e oportunidades — para as organizações sindicais. O FBIS nasceu para aproximar pessoas e organizações que querem entender essas mudanças, compartilhar experiências e construir novos caminhos para a atuação sindical. Mais do que um evento, um espaço de encontro, troca e transformação."
-  image:
-    src: https://images.unsplash.com/photo-1492684223066-81342ee5ff30?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXZlbnRvc3xlbnwwfHwwfHx8MA%3D%3D
-    alt: FBIS 2027
+  description: O mundo do trabalho está mudando. O movimento sindical também.
+  paragraph:
+    - A ideia do 1º Fórum Brasileiro de Inovação Sindical surgiu da necessidade de promover um diálogo entre diferentes sindicatos, categorias e níveis, em conjunto com assessorias e de forma aberta à sociedade.
+    - O fórum tem como base a experiência e a reflexão do professor José Roberto Paludo, presidente do Instituto Política Boa, em parceria com Giuliano Salvarani, da Baila Politics.
+  images:
+    - src: /images/fbis_section/fbis_section_1.jpg
+      alt: Participantes reunidos durante o FBIS
+    - src: /images/fbis_section/fbis_section_2.jpg
+      alt: Público acompanhando uma atividade do FBIS
