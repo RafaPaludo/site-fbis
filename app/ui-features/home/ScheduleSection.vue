@@ -41,7 +41,7 @@ const tabs = computed(() => props.page.schedule.days.map(day => ({
             v-for="(activity, index) in item.activities"
             :key="`${item.value}-${activity.time}-${activity.title}`"
             class="grid gap-x-6 gap-y-3 px-4 py-6 md:grid-cols-[7rem_1fr] md:py-8"
-            :class="index % 2 === 0 ? 'bg-fbis-off-white' : 'bg-[#EAF0F7]'"
+            :class="index % 2 === 0 ? 'bg-fbis-off-white' : 'bg-fbis-yellow-soft'"
           >
             <p class="font-display text-xl font-semibold tabular-nums text-fbis-blue md:text-2xl">
               {{ activity.time }}

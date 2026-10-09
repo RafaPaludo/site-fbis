@@ -16,7 +16,7 @@ defineProps<{ page: HomePageContent }>()
         id="inscricao-em-grupo"
         :ui="{
           root: 'h-full',
-          container: '',
+          container: 'py-4',
           title: 'text-left text-2xl font-semibold md:text-3xl',
           description: 'text-left text-fbis-gray',
           links: 'mt-6 justify-start'
@@ -55,7 +55,7 @@ defineProps<{ page: HomePageContent }>()
         id="apresentacao-fbis"
         :ui="{
           root: 'h-full',
-          container: '',
+          container: 'py-4',
           title: 'text-left text-2xl font-semibold md:text-3xl',
           description: 'text-left text-fbis-gray',
           links: 'mt-6 justify-start'

@@ -60,7 +60,7 @@ defineProps<{ page: HomePageContent }>()
           variant="outline"
           class="w-full overflow-hidden ring-fbis-blue"
           :ui="{
-            container: 'relative flex flex-col flex-1 sm:p-0'
+            container: 'relative flex flex-col flex-1 sm:p-0 p-0'
           }"
         >
           <img
