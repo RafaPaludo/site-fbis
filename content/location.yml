@@ -1,0 +1,20 @@
+location:
+  title: "Nos vemos em Brasília"
+  date: "25 e 26 de maio de 2027"
+  venue: "[Nome do local]"
+  address: "[Nome do local]"
+  city: "Brasília / DF"
+  mapEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=-47.93%2C-15.82%2C-47.84%2C-15.76&layer=mapnik&marker=-15.79%2C-47.88"
+  services:
+    - id: airport
+      icon: i-lucide-plane
+      title: Aeroporto
+      description: "XX km"
+    - id: parking
+      icon: i-lucide-square-parking
+      title: Estacionamento
+      description: Informações
+    - id: accommodation
+      icon: i-lucide-bed-double
+      title: Hospedagem
+      description: "Hotéis próximos."

@@ -1,9 +1,15 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'red',
+      primary: 'blue',
       warning: 'yellow',
       neutral: 'zinc'
+    },
+
+    pageSection: {
+      slots: {
+        container: 'sm:gap-8'
+      }
     },
 
     button: {

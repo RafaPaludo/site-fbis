@@ -1,0 +1,33 @@
+lastExperience:
+  headline: 1ª Edição
+  title: "Em 2025, fizemos nossa estreia"
+  description: Dois dias reunindo ideias, experiências e pessoas que estão pensando o futuro do movimento sindical.
+  video:
+    src: https://drive.google.com/file/d/1jFCabbmPU5vCnBZBB28WPijKguquwcYH/preview
+    title: Aftermovie da primeira edição do FBIS
+  items:
+    - label: +250 Participantes
+    - label: XX palestras
+    - label: XX palestras
+  testimonials:
+    - name: 'Evan You'
+      description: 'Author of Vue.js and Vite'
+      quote: 'Nuxt on Cloudflare infra with minimal effort - this is huge!'
+      avatar:
+        src: 'https://avatars.githubusercontent.com/u/499550?v=4'
+        alt: 'Evan You'
+        loading: 'lazy'
+    - name: 'Igor Minar'
+      description: 'Software Engineer at Cloudflare'
+      quote: 'I love the polish and the batteries-included approach. NuxtHub takes web framework and hosting integration to a new level!'
+      avatar:
+        src: 'https://avatars.githubusercontent.com/u/216296?v=4'
+        alt: 'Igor Minar'
+        loading: 'lazy'
+    - name: 'Igor Minar'
+      description: 'Software Engineer at Cloudflare'
+      quote: 'I love the polish and the batteries-included approach. NuxtHub takes web framework and hosting integration to a new level!'
+      avatar:
+        src: 'https://avatars.githubusercontent.com/u/216296?v=4'
+        alt: 'Igor Minar'
+        loading: 'lazy'

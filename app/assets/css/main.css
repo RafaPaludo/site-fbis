@@ -14,9 +14,37 @@
   --color-fbis-blue: #152B50;
   --color-fbis-navy: #0B172A;
   --color-fbis-yellow: #F2C94C;
+  --color-fbis-gold: #8A6000;
+  --color-fbis-yellow-soft: #FFF8E5;
   --color-fbis-off-white: #FAFAF7;
   --color-fbis-black: #111111;
   --color-fbis-gray: #5F6368;
+
+  /* FBIS Blue */
+  --color-blue-50: #eff5ff;
+  --color-blue-100: #dbe8ff;
+  --color-blue-200: #bdd4ff;
+  --color-blue-300: #91b7ff;
+  --color-blue-400: #5f91e8;
+  --color-blue-500: #356fc5;
+  --color-blue-600: #2456a6;
+  --color-blue-700: #1e4788;
+  --color-blue-800: #1c3b6e;
+  --color-blue-900: #1b335a;
+  --color-blue-950: #12213b;
+
+  /* FBIS Gold */
+  --color-yellow-50: #fff8e5;
+  --color-yellow-100: #fff0c2;
+  --color-yellow-200: #ffe28a;
+  --color-yellow-300: #f9d96f;
+  --color-yellow-400: #f2c94c;
+  --color-yellow-500: #d99a00;
+  --color-yellow-600: #c58b00;
+  --color-yellow-700: #a97800;
+  --color-yellow-800: #8a6000;
+  --color-yellow-900: #704d00;
+  --color-yellow-950: #422c00;
 
   /* FBIS Red */
   --color-red-50: #fdf1f2;
@@ -45,10 +73,10 @@
 }
 
 .dark {
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-900);
-  --ui-bg-accented: var(--ui-color-neutral-800);
+  --ui-bg: #171c25;
+  --ui-bg-muted: #1d2632;
+  --ui-bg-elevated: #263241;
+  --ui-bg-accented: #344254;
 
-  --ui-border: var(--ui-color-neutral-900);
+  --ui-border: #344254;
 }

@@ -1,0 +1,22 @@
+fbisSpeakers:
+  title: Quem estará no FBIS 2027
+  description: Pessoas que estão pensando, pesquisando e colocando novas ideias em prática.
+  speakers:
+    - name: "João Paulo"
+      org: "FBIS"
+      bio: "Breve descrição de quem é"
+      image:
+          src: 'https://avatars.githubusercontent.com/u/216296?v=4'
+          alt: 'Igor Minar'
+    - name: "João Paulo"
+      org: "FBIS"
+      bio: "Breve descrição de quem é"
+      image:
+          src: 'https://avatars.githubusercontent.com/u/216296?v=4'
+          alt: 'Igor Minar'
+    - name: "João Paulo"
+      org: "FBIS"
+      bio: "Breve descrição de quem é"
+      image:
+          src: 'https://avatars.githubusercontent.com/u/216296?v=4'
+          alt: 'Igor Minar'

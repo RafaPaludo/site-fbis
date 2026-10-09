@@ -1,0 +1,43 @@
+terminal:
+  lines:
+    - segments:
+        - text: "$ "
+          style: prompt
+        - text: "npx telemetry"
+          style: cmd
+        - text: " init"
+          style: flag
+    - segments:
+        - text: "→ Scanning service topology..."
+          style: dim
+    - segments:
+        - text: "→ Found "
+          style: dim
+        - text: "23 services"
+          style: cmd
+        - text: ", "
+          style: dim
+        - text: "847 endpoints"
+          style: cmd
+        - text: ", "
+          style: dim
+        - text: "12 databases"
+          style: cmd
+    - segments:
+        - text: "→ Deploying collector agents "
+          style: dim
+        - text: "✓"
+          style: success
+    - segments:
+        - text: "→ Baseline established in "
+          style: dim
+        - text: "340ms"
+          style: metric-good
+    - segments:
+        - text: " "
+          style: dim
+    - segments:
+        - text: "✓ Live at "
+          style: success
+        - text: "https://app.example.com/acme-corp"
+          style: url

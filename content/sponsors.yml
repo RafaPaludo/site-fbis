@@ -1,0 +1,17 @@
+sponsors:
+  title: "Parceiros e patrocinadores"
+  buttonLabel: "Seja um patrocinador"
+  buttonTo: "https://api.whatsapp.com/send/?phone=5548991218168&text=Ol%C3%A1%21+Tenho+interesse+em+ser+patrocinador+do+FBIS+2027&type=phone_number&app_absent=0"
+  logos:
+    - id: sponsor-01
+      src: /images/sponsors/sponsor-mark-01.png
+      alt: "Marca fictícia de patrocinador, símbolo de colaboração"
+    - id: sponsor-02
+      src: /images/sponsors/sponsor-mark-02.png
+      alt: "Marca fictícia de patrocinador, símbolo de união"
+    - id: sponsor-03
+      src: /images/sponsors/sponsor-mark-03.png
+      alt: "Marca fictícia de patrocinador, símbolo de progresso"
+    - id: sponsor-04
+      src: /images/sponsors/sponsor-mark-04.png
+      alt: "Marca fictícia de patrocinador, símbolo de conexão"
