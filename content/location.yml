@@ -1,20 +1,28 @@
 location:
   title: "Nos vemos em Brasília"
   date: "25 e 26 de maio de 2027"
-  venue: "[Nome do local]"
-  address: "[Nome do local]"
-  city: "Brasília / DF"
-  mapEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=-47.93%2C-15.82%2C-47.84%2C-15.76&layer=mapnik&marker=-15.79%2C-47.88"
+  venue: "Parlamundi"
+  address: "SGAS I - SGAS 915 (Lotes 75/76), Asa Sul, Brasília - DF"
+  mapEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=-47.932111%2C-15.825116%2C-47.927111%2C-15.822116&layer=mapnik&marker=-15.823616%2C-47.929611"
   services:
     - id: airport
       icon: i-lucide-plane
       title: Aeroporto
-      description: "XX km"
+      description: "8,2 km"
     - id: parking
       icon: i-lucide-square-parking
       title: Estacionamento
-      description: Informações
+      links:
+        - label: Informações Fenix Eventos DF
+          to: "https://fenixeventosdf.com.br"
+          icon: i-lucide-arrow-up-right
     - id: accommodation
       icon: i-lucide-bed-double
       title: Hospedagem
-      description: "Hotéis próximos."
+      links:
+        - label: hoteis.com
+          to: "https://www.booking.com/searchresults.pt-br.html?ss=ParlaMundi+Centro+de+Conven%C3%A7%C3%B5es&ssne=Bras%C3%ADlia&ssne_untouched=Bras%C3%ADlia&efdco=1&label=mkt123sc-de05730b-e4fb-464e-a897-b0e80c0e304f&aid=356980&lang=pt-br&sb=1&src_elem=sb&src=city&dest_id=ChIJ35uIggQwWpMRQDGx4ui9J4A&dest_type=latlong&latitude=-15.8237643&longitude=-47.9296945&ac_meta=IAAoAjICeGJaCmF1ZGl0b3JpdW0%3D&ac_position=0&ac_click_type=g&ac_langcode=xb&ac_suggestion_list_length=2&search_selected=true&search_pageview_id=99fd93cab6320111&checkin=2027-05-25&checkout=2027-05-26&group_adults=2&no_rooms=1&group_children=0&sb_lp=1"
+          icon: i-lucide-arrow-up-right
+        - label: tripadvisor
+          to: "https://www.tripadvisor.com.br/Hotels-g303322-Brasilia_Federal_District-Hotels.html"
+          icon: i-lucide-arrow-up-right
