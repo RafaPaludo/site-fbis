@@ -38,25 +38,39 @@ defineProps<{ page: HomePageContent }>()
         {{ page.lastExperience.description }}
       </Motion>
     </template>
-    <div class="flex flex-col lg:flex-row">
-      <img
-        :src="page.lastExperience.image.src"
-        :alt="page.lastExperience.image.alt"
-      >
-      <div class="rounded-r-lg border border-default bg-default overflow-hidden flex lg:flex-col justify-end">
+    <UPageGrid>
+      <div class="relative isolate grid w-full place-items-center lg:col-span-2 lg:py-8">
+        <div
+          aria-hidden="true"
+          class="pointer-events-none col-start-1 row-start-1 h-[min(80vh,640px)] aspect-[9/16] translate-x-5 translate-y-5 rotate-16 rounded-lg bg-fbis-yellow-soft lg:block"
+        />
+        <video
+          class="relative z-10 col-start-1 row-start-1 mx-auto h-[min(80vh,640px)] aspect-[9/16] max-w-full rounded-lg bg-black object-contain"
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Aftermovie do FBIS"
+        >
+          <source
+            src="/videos/FBIS%20(Aftermovie-Reels).mp4"
+            type="video/mp4"
+          >
+          Seu navegador não oferece suporte à reprodução de vídeo.
+        </video>
+      </div>
+      <div class="flex w-full flex-col justify-center gap-8 px-4 py-6 lg:w-auto lg:px-0 relative">
         <Motion
           v-for="(item, index) in page.lastExperience.items"
           :key="item.label"
           v-bind="staggerMotion(index)"
         >
-          <UPageCard
-            :title="item.label"
-            class="rounded-none duration-300"
-            :ui="{ leading: 'mb-5 flex size-9 justify-center rounded-lg bg-primary/10', title: 'text-sm tracking-tight', description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed' }"
-          />
+          <div class="flex flex-col text-center lg:text-left">
+            <span class="font-display text-5xl leading-none font-bold text-fbis-yellow sm:text-6xl">{{ item.label.split(' ')[0] }}</span>
+            <span class="mt-2 text-base font-medium text-default">{{ item.label.split(' ').slice(1).join(' ') }}</span>
+          </div>
         </Motion>
       </div>
-    </div>
+    </UPageGrid>
     <UPageColumns>
       <UPageCard
         v-for="(testimonial, index) in page.lastExperience.testimonials"
