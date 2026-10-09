@@ -37,6 +37,7 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <FbisSection :page="page" />
     <USeparator />
     <WhyParticipateSection :page="page" />
+    <USeparator />
     <SpeakersSection :page="page" />
     <ManifestoSection :page="page" />
     <Themes2027Section :page="page" />

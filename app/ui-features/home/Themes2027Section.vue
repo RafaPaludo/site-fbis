@@ -38,7 +38,7 @@ const selectedTheme = computed(() => props.page.themes2027.items.find(item => it
       </Motion>
     </template>
     <template #features>
-      <ul class="mt-8 space-y-2">
+      <ul class="mt-2 space-y-2">
         <li
           v-for="item in page.themes2027.items"
           :key="item.id"
