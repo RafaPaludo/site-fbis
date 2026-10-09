@@ -32,10 +32,9 @@ const tabs = computed(() => props.page.schedule.days.map(day => ({
     <UTabs
       :items="tabs"
       :default-value="tabs[0]?.value"
-      variant="link"
       color="primary"
       :ui="{
-        list: 'w-full justify-start border-b border-default',
+        list: 'w-full justify-start',
         trigger: 'px-5 py-3 text-base font-semibold',
         content: 'pt-6'
       }"

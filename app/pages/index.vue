@@ -33,14 +33,20 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <HeroSection :page="page" />
     <MarqueeSection :page="page" />
     <LastExperienceSection :page="page" />
+    <USeparator />
     <FbisSection :page="page" />
+    <USeparator />
     <WhyParticipateSection :page="page" />
     <SpeakersSection :page="page" />
     <ManifestoSection :page="page" />
     <Themes2027Section :page="page" />
+    <USeparator />
     <ScheduleSection :page="page" />
+    <USeparator />
     <OrganizationInfoSection :page="page" />
+    <USeparator />
     <SponsorsSection :page="page" />
+    <USeparator />
     <LocationSection :page="page" />
     <FaqSection :page="page" />
   </main>

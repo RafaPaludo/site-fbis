@@ -96,6 +96,8 @@ const variants: Record<string, VariantType | ((custom: unknown) => VariantType)>
         class="hidden lg:flex"
         to="https://wa.me/5548991218168?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20FBIS%202027"
         target="_blank"
+        trailing-icon="i-lucide-arrow-up-right"
+        size="xl"
       />
     </template>
 

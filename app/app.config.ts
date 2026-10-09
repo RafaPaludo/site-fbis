@@ -6,6 +6,12 @@ export default defineAppConfig({
       neutral: 'zinc'
     },
 
+    pageSection: {
+      slots: {
+        container: 'sm:gap-8'
+      }
+    },
+
     button: {
       slots: {
         base: [

@@ -15,7 +15,7 @@ type FaqContent = { title: string, items: Array<{ id: string, question: string, 
 export type HomePageContent = {
   title: string
   description: string
-  hero: { headline: string, links: Array<Record<string, string>> }
+  hero: { headline: string, image: ImageContent, links: Array<Record<string, string>> }
   marquee: { label: string, link: string }
   lastExperience: {
     headline: string

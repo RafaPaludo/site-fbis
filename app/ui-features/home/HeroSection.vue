@@ -15,7 +15,7 @@ function enterMotion(delay = 0) {
 <template>
   <UPageHero
     orientation="horizontal"
-    :ui="{ root: 'pb-0 sm:pb-0', container: 'relative z-10 lg:py-24', wrapper: 'flex flex-col', title: 'sm:text-6xl lg:text-7xl', description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default', links: 'gap-3' }"
+    :ui="{ root: 'pb-0 sm:pb-0', container: 'relative z-10 lg:py-16', wrapper: 'flex flex-col', title: 'sm:text-6xl lg:text-7xl', description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default', links: 'gap-3' }"
   >
     <template #top>
       <Motion v-bind="{ initial: { opacity: 0 }, whileInView: { opacity: 1 }, inViewOptions: { once: true }, transition: { duration: 0.6 } }">
@@ -76,5 +76,11 @@ function enterMotion(delay = 0) {
         />
       </Motion>
     </template>
+
+    <img
+      :src="page.hero.image.src"
+      :alt="page.hero.image.alt"
+      class="mx-auto rounded-lg"
+    >
   </UPageHero>
 </template>

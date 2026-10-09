@@ -9,7 +9,7 @@ defineProps<{ page: HomePageContent }>()
 <template>
   <UPageSection
     id="whyParticipate"
-    :ui="{ root: 'scroll-mt-(--ui-header-height)', container: 'lg:py-24', headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center', title: '', description: 'text-dimmed' }"
+    :ui="{ root: 'scroll-mt-(--ui-header-height)', container: 'lg:py-24', headline: 'font-display font-medium text-xs text-primary uppercase tracking-[0.12em] text-center', title: 'font-display', description: 'text-dimmed' }"
   >
     <template #title>
       <Motion
@@ -29,18 +29,26 @@ defineProps<{ page: HomePageContent }>()
         {{ page.whyParticipate.description }}
       </Motion>
     </template>
-    <Motion
-      v-for="(item, index) in page.whyParticipate.items"
-      :key="item.label"
-      v-bind="staggerMotion(index)"
-    >
-      <UPageFeature
-        :title="item.label"
-        :description="item.description"
-        icon="i-lucide-swatch-book"
-        class="rounded-none duration-300"
-        :ui="{ leading: 'mb-5 flex size-9 justify-center rounded-lg bg-primary/10', title: 'text-sm tracking-tight', description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed' }"
-      />
-    </Motion>
+
+    <UPageGrid>
+      <Motion
+        v-for="(item, index) in page.whyParticipate.items"
+        :key="item.label"
+        v-bind="staggerMotion(index)"
+      >
+        <UPageCard
+          :title="item.label"
+          :description="item.description"
+          icon="i-lucide-swatch-book"
+          class="duration-300"
+          variant="soft"
+          :ui="{
+            leading: 'mb-5 flex size-9 justify-center rounded-lg bg-primary/10',
+            title: 'text-lg tracking-tight font-display',
+            description: 'text-sm leading-relaxed text-dimmed'
+          }"
+        />
+      </Motion>
+    </UPageGrid>
   </UPageSection>
 </template>
