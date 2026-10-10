@@ -3,11 +3,26 @@ fbisSpeakers:
   description: Perfis de palestrantes em definição, com diferentes perspectivas sobre o futuro do trabalho e do movimento sindical.
   speakers:
     - name: 'Liderança sindical'
+      image: /images/fbis_section/fbis_section_1.jpg
       bio: >-
         Atua na representação de trabalhadores e na construção de pautas coletivas. Compartilha os desafios cotidianos da organização sindical. Contribui com caminhos para fortalecer a participação e a defesa de direitos.
     - name: 'Pesquisadora do mundo do trabalho'
+      image: /images/fbis_section/fbis_section_2.jpg
       bio: >-
         Investiga as transformações nas relações de trabalho e seus efeitos sobre a vida profissional. Aproxima pesquisa, políticas públicas e realidade das categorias. Traz evidências para qualificar o debate e apoiar novas estratégias.
     - name: 'Especialista em negociação coletiva'
+      image: /a_validar.jpg
+      bio: >-
+        Atua em processos de diálogo e negociação entre trabalhadores e organizações. Reúne experiência em mediação de conflitos e construção de acordos. Apresenta práticas que ajudam a fortalecer a atuação coletiva.
+    - name: 'Liderança sindical'
+      image: /images/fbis_section/fbis_section_1.jpg
+      bio: >-
+        Atua na representação de trabalhadores e na construção de pautas coletivas. Compartilha os desafios cotidianos da organização sindical. Contribui com caminhos para fortalecer a participação e a defesa de direitos.
+    - name: 'Pesquisadora do mundo do trabalho'
+      image: /images/fbis_section/fbis_section_2.jpg
+      bio: >-
+        Investiga as transformações nas relações de trabalho e seus efeitos sobre a vida profissional. Aproxima pesquisa, políticas públicas e realidade das categorias. Traz evidências para qualificar o debate e apoiar novas estratégias.
+    - name: 'Especialista em negociação coletiva'
+      image: /a_validar.jpg
       bio: >-
         Atua em processos de diálogo e negociação entre trabalhadores e organizações. Reúne experiência em mediação de conflitos e construção de acordos. Apresenta práticas que ajudam a fortalecer a atuação coletiva.

@@ -184,7 +184,7 @@ Evitar utilizar todas as cores saturadas simultaneamente.
 ## Tipografia
 
 A tipografia principal utiliza:
-- Space Grotesk para títulos, números e elementos de impacto.
+- Archivo para títulos, números e elementos de impacto.
 - Inter para textos, navegação, botões e elementos de interface.
 
 Títulos devem possuir presença visual forte, mas sem exagerar no tamanho.

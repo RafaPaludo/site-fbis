@@ -57,18 +57,18 @@ defineProps<{ page: HomePageContent }>()
                   class="size-6 text-primary"
                   aria-hidden="true"
                 />
-                <h3 class="mt-4 font-display text-xl font-semibold text-fbis-blue">
+                <h3 class="font-display text-xl font-semibold text-fbis-blue">
                   {{ service.title }}
                 </h3>
                 <p
                   v-if="service.description"
-                  class="mt-2 text-fbis-gray"
+                  class="text-fbis-gray"
                 >
                   {{ service.description }}
                 </p>
                 <ul
                   v-if="service.links?.length"
-                  class="mt-2 space-y-2"
+                  class="space-y-2"
                 >
                   <li
                     v-for="link in service.links"

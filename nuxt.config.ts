@@ -53,7 +53,7 @@ export default defineNuxtConfig({
         weights: [400, 500, 600, 700]
       },
       {
-        name: 'Space Grotesk',
+        name: 'Archivo',
         weights: [400, 500, 600, 700]
       }
     ]

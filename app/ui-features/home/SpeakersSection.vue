@@ -26,20 +26,44 @@ defineProps<{ page: HomePageContent }>()
         {{ page.fbisSpeakers.description }}
       </Motion>
     </template>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <Motion
-        v-for="(speaker, index) in page.fbisSpeakers.speakers"
-        :key="speaker.name"
-        v-bind="staggerMotion(index)"
-      >
-        <UPageCard
-          :title="speaker.name"
-          :description="speaker.bio"
-          reverse
-          class="duration-300"
-          :ui="{ leading: 'mb-5 justify-center rounded-lg bg-primary/10', title: 'text-sm tracking-tight', description: 'line-clamp-3 text-sm leading-relaxed text-dimmed' }"
-        />
-      </Motion>
-    </div>
+    <UCarousel
+      :items="page.fbisSpeakers.speakers"
+      dots
+      class="pb-12"
+      :ui="{
+        item: 'basis-full md:basis-1/3',
+        container: 'p-1',
+        prev: 'top-auto bottom-0 start-4',
+        next: 'top-auto bottom-0 end-4',
+        dots: 'inset-x-12 bottom-2'
+      }"
+    >
+      <template #default="{ item: speaker, index }">
+        <Motion
+          v-bind="staggerMotion(index)"
+          class="group/card relative pt-14"
+        >
+          <UPageCard
+            :title="speaker.name"
+            :description="speaker.bio"
+            reverse
+            class="transition-transform duration-300 ease-out hover:-translate-y-2 motion-reduce:transition-none"
+            :ui="{
+              root: 'overflow-visible',
+              leading: 'mb-5 justify-center rounded-lg bg-primary/10',
+              title: 'text-sm tracking-tight',
+              description: 'line-clamp-3 text-sm leading-relaxed text-dimmed'
+            }"
+          >
+            <img
+              :src="speaker.image"
+              :alt="`Foto de ${speaker.name}`"
+              class=""
+              loading="lazy"
+            >
+          </UPageCard>
+        </Motion>
+      </template>
+    </UCarousel>
   </UPageSection>
 </template>

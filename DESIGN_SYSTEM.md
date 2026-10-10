@@ -10,7 +10,7 @@ Cores
 └── Gray     #5F6368
 
 Tipografia
-├── Display → Space Grotesk
+├── Display → Archivo
 └── Body    → Inter
 
 Radius

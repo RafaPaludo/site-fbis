@@ -34,6 +34,6 @@ export type HomePageContent = {
   location: LocationContent
   faq: FaqContent
   whyParticipate: { title: string, description: string, items: Array<{ label: string, description: string }> }
-  fbisSpeakers: { title: string, description: string, speakers: Array<{ name: string, bio: string }> }
+  fbisSpeakers: { title: string, description: string, speakers: Array<{ name: string, bio: string, image: string }> }
   seo?: { title?: string, description?: string }
 }

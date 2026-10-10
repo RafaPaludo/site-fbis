@@ -6,7 +6,8 @@ const props = defineProps<{ page: HomePageContent }>()
 const title = computed(() => {
   const words = props.page.manifesto.title.split(' ')
   return {
-    highlight: words.slice(0, 2).join(' '),
+    prefix: words[0],
+    highlight: words[1],
     rest: words.slice(2).join(' ')
   }
 })
@@ -85,7 +86,7 @@ const title = computed(() => {
           aria-hidden="true"
           class="mb-4 block h-1 w-16 rounded-full bg-fbis-yellow md:mb-10"
         />
-        <span class="block text-fbis-yellow">{{ title.highlight }}</span>
+        <span class="block text-white">{{ title.prefix }} <span class="text-fbis-yellow">{{ title.highlight }}</span></span>
         <span class="block text-white">{{ title.rest }}</span>
       </Motion>
     </template>
