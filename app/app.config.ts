@@ -63,6 +63,13 @@ export default defineAppConfig({
           }
         }
       ]
+    },
+
+    pricingPlan: {
+      slots: {
+        root: 'relative grid rounded-lg p-4 lg:p-6 xl:p-6 gap-2',
+        price: 'sm:text-5xl text-fbis-navy'
+      }
     }
   }
 })

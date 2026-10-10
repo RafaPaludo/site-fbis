@@ -12,6 +12,7 @@ import LocationSection from '~/ui-features/home/LocationSection.vue'
 import FaqSection from '~/ui-features/home/FaqSection.vue'
 import WhyParticipateSection from '~/ui-features/home/WhyParticipateSection.vue'
 import SpeakersSection from '~/ui-features/home/SpeakersSection.vue'
+import TicketsSection from '~/ui-features/home/TicketsSection.vue'
 
 definePageMeta({ colorMode: 'light' })
 
@@ -43,6 +44,8 @@ useSeoMeta({ title, ogTitle: title, description, ogDescription: description })
     <Themes2027Section :page="page" />
     <USeparator />
     <ScheduleSection :page="page" />
+    <USeparator />
+    <TicketsSection />
     <USeparator />
     <OrganizationInfoSection :page="page" />
     <USeparator />
