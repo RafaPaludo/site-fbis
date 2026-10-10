@@ -9,7 +9,7 @@ type OrganizationInfo = {
 type SponsorLogo = { id: string, src: string, alt: string }
 type Sponsors = { title: string, buttonLabel: string, buttonTo: string, logos: SponsorLogo[] }
 type LocationService = { id: string, icon: string, title: string, description?: string, links?: Array<{ label: string, to: string, icon?: string }> }
-type LocationContent = { title: string, date: string, venue: string, address: string, city: string, mapEmbed: string, services: LocationService[] }
+type LocationContent = { title: string, date: string, venue: string, address: string, addressLink: string, city: string, mapEmbed: string, services: LocationService[] }
 type FaqContent = { title: string, items: Array<{ id: string, question: string, answer: string }> }
 
 export type HomePageContent = {

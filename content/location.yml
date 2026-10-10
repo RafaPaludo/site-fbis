@@ -3,6 +3,7 @@ location:
   date: "25 e 26 de maio de 2027"
   venue: "Parlamundi"
   address: "SGAS I - SGAS 915 (Lotes 75/76), Asa Sul, Brasília - DF"
+  addressLink: "https://www.google.com/maps/dir/-27.2662528,-48.8505344/ParlaMundi+Centro+de+Conven%C3%A7%C3%B5es,+SGAS+I+SGAS+915+-+Asa+Sul,+Bras%C3%ADlia+-+DF,+70390-150/@-21.4686928,-53.2350562,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x935a300482889bdf:0x8027bde8e2b13140!2m2!1d-47.9296945!2d-15.8237643?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
   mapEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=-47.932111%2C-15.825116%2C-47.927111%2C-15.822116&layer=mapnik&marker=-15.823616%2C-47.929611"
   services:
     - id: airport

@@ -33,20 +33,44 @@ defineProps<{ page: HomePageContent }>()
           v-bind="scrollMotion()"
           class="space-y-4 text-lg text-fbis-gray"
         >
-          <p class="font-semibold text-fbis-blue">
-            {{ page.location.date }}
-          </p>
           <address class="space-y-1 not-italic">
-            <p>{{ page.location.venue }}</p>
-            <p>{{ page.location.address }}</p>
+            <h3 class="text-3xl text-fbis-blue font-bold">
+              {{ page.location.venue }}
+            </h3>
+
             <p>{{ page.location.city }}</p>
           </address>
 
           <div class="grid gap-4 sm:grid-cols-2">
+            <Motion v-bind="staggerMotion(0)">
+              <UPageCard
+                variant="subtle"
+                class="h-full"
+              >
+                <UIcon
+                  name="i-lucide-map-pin"
+                  class="size-6 text-primary"
+                  aria-hidden="true"
+                />
+                <h3 class="font-display text-xl font-semibold text-fbis-blue">
+                  Endereço
+                </h3>
+                <UButton
+                  :to="page.location.addressLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="link"
+                  color="neutral"
+                  class="h-auto p-0 text-left font-normal text-fbis-gray underline decoration-primary/50 underline-offset-4 hover:text-primary"
+                >
+                  {{ page.location.address }}
+                </UButton>
+              </UPageCard>
+            </Motion>
             <Motion
               v-for="(service, index) in page.location.services"
               :key="service.id"
-              v-bind="staggerMotion(index)"
+              v-bind="staggerMotion(index + 1)"
             >
               <UPageCard
                 variant="subtle"
@@ -98,7 +122,7 @@ defineProps<{ page: HomePageContent }>()
 
       <Motion
         v-bind="scrollMotion(0.2)"
-        class="overflow-hidden rounded-lg border border-default"
+        class="overflow-hidden rounded-lg border-none"
       >
         <img
           src="/location/parlamundi.jpg"
@@ -107,6 +131,28 @@ defineProps<{ page: HomePageContent }>()
           loading="lazy"
           decoding="async"
         >
+
+        <UPageColumns
+          :ui="{ base: 'columns-2 gap-6 sm:columns-2' }"
+          class="mt-6"
+        >
+          <div class="break-inside-avoid border-l-2 border-fbis-yellow py-1 pl-4">
+            <h3 class="font-display text-lg font-semibold text-fbis-blue">
+              Data
+            </h3>
+            <p class="mt-1 text-fbis-gray">
+              25 e 26 de maio
+            </p>
+          </div>
+          <div class="break-inside-avoid border-l-2 border-fbis-yellow py-1 pl-4">
+            <h3 class="font-display text-lg font-semibold text-fbis-blue">
+              FORMATO
+            </h3>
+            <p class="mt-1 text-fbis-gray">
+              2 dias presenciais
+            </p>
+          </div>
+        </UPageColumns>
       </Motion>
     </UPageSection>
 
