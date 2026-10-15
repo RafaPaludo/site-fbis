@@ -35,7 +35,7 @@ const items = computed(() => props.page.faq.items.map(item => ({
       collapsible
       :ui="{
         item: 'border-b border-default',
-        trigger: 'py-5 text-left font-semibold text-fbis-blue',
+        trigger: 'py-5 text-left font-semibold text-fbis-black',
         content: 'pb-5 leading-relaxed text-fbis-gray'
       }"
       class="w-full"

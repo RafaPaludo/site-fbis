@@ -11,53 +11,59 @@
   --font-mono: 'IBM Plex Mono', monospace;
 
   /* FBIS - Institutional */
-  --color-fbis-blue: #152B50;
-  --color-fbis-navy: #0B172A;
+  --color-fbis-red: #D92720;
+  --color-fbis-red-dark: #B9362B;
+  --color-fbis-red-soft: #FFF0EE;
+
+  --color-fbis-blue: #1729A5;
+  --color-fbis-navy: #0C164F;
+
   --color-fbis-yellow: #F2C94C;
   --color-fbis-gold: #8A6000;
   --color-fbis-yellow-soft: #FFF8E5;
-  --color-fbis-off-white: #FAFAF7;
-  --color-fbis-black: #111111;
+
+  --color-fbis-off-white: #FAF8F4;
+  --color-fbis-black: #171717;
   --color-fbis-gray: #5F6368;
 
-  /* FBIS Blue */
-  --color-blue-50: #eff5ff;
-  --color-blue-100: #dbe8ff;
-  --color-blue-200: #bdd4ff;
-  --color-blue-300: #91b7ff;
-  --color-blue-400: #5f91e8;
-  --color-blue-500: #356fc5;
-  --color-blue-600: #2456a6;
-  --color-blue-700: #1e4788;
-  --color-blue-800: #1c3b6e;
-  --color-blue-900: #1b335a;
-  --color-blue-950: #12213b;
-
-  /* FBIS Gold */
-  --color-yellow-50: #fff8e5;
-  --color-yellow-100: #fff0c2;
-  --color-yellow-200: #ffe28a;
-  --color-yellow-300: #f9d96f;
-  --color-yellow-400: #f2c94c;
-  --color-yellow-500: #d99a00;
-  --color-yellow-600: #c58b00;
-  --color-yellow-700: #a97800;
-  --color-yellow-800: #8a6000;
-  --color-yellow-900: #704d00;
-  --color-yellow-950: #422c00;
-
   /* FBIS Red */
-  --color-red-50: #fdf1f2;
-  --color-red-100: #f9dfe2;
-  --color-red-200: #f3bec4;
-  --color-red-300: #ec9aa3;
-  --color-red-400: #e56a77;
-  --color-red-500: #d93645;
-  --color-red-600: #c62f3d;
-  --color-red-700: #a92634;
-  --color-red-800: #8d2430;
-  --color-red-900: #75232d;
-  --color-red-950: #3f1017;
+  --color-red-50: #FFF0EE;
+  --color-red-100: #FFDAD6;
+  --color-red-200: #FFB9B1;
+  --color-red-300: #FF9185;
+  --color-red-400: #FF5D4F;
+  --color-red-500: #F12D25;
+  --color-red-600: #D92720;
+  --color-red-700: #B91F19;
+  --color-red-800: #971C18;
+  --color-red-900: #7D1D1A;
+  --color-red-950: #450B09;
+
+  /* FBIS Blue */
+  --color-blue-50: #EFF1FF;
+  --color-blue-100: #E0E5FF;
+  --color-blue-200: #C5CEFF;
+  --color-blue-300: #A0AEFF;
+  --color-blue-400: #7487FF;
+  --color-blue-500: #4358E8;
+  --color-blue-600: #293BC8;
+  --color-blue-700: #1729A5;
+  --color-blue-800: #19278A;
+  --color-blue-900: #18246E;
+  --color-blue-950: #0C164F;
+
+  /* FBIS Yellow - Accent */
+  --color-yellow-50: #FFF8E5;
+  --color-yellow-100: #FFF0C2;
+  --color-yellow-200: #FFE28A;
+  --color-yellow-300: #F9D96F;
+  --color-yellow-400: #F2C94C;
+  --color-yellow-500: #D99A00;
+  --color-yellow-600: #C58B00;
+  --color-yellow-700: #A97800;
+  --color-yellow-800: #8A6000;
+  --color-yellow-900: #704D00;
+  --color-yellow-950: #422C00;
 
   --animate-shimmer: shimmer 8s ease-in-out infinite alternate;
 
@@ -73,10 +79,10 @@
 }
 
 .dark {
-  --ui-bg: #171c25;
-  --ui-bg-muted: #1d2632;
-  --ui-bg-elevated: #263241;
-  --ui-bg-accented: #344254;
+  --ui-bg: #171717;
+  --ui-bg-muted: #0C164F;
+  --ui-bg-elevated: #18246E;
+  --ui-bg-accented: #293BC8;
 
-  --ui-border: #344254;
+  --ui-border: #344078;
 }

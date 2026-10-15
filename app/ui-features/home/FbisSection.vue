@@ -10,11 +10,11 @@ defineProps<{ page: HomePageContent }>()
     id="evento"
     orientation="horizontal"
     :ui="{
-      root: 'bg-fbis-navy text-fbis-off-white',
+      root: 'bg-fbis-off-white text-fbis-black',
       container: 'lg:items-start',
-      title: 'text-fbis-yellow',
-      description: 'text-fbis-off-white',
-      features: 'text-fbis-off-white'
+      title: 'text-fbis-black',
+      description: 'text-fbis-red-dark',
+      features: 'text-fbis-gray'
     }"
   >
     <template #title>
@@ -38,7 +38,7 @@ defineProps<{ page: HomePageContent }>()
         <Motion
           as="div"
           v-bind="scrollMotion(0.3)"
-          class="space-y-4 text-lg leading-relaxed text-fbis-off-white"
+          class="space-y-4 text-lg leading-relaxed text-fbis-gray"
         >
           <p
             v-for="(paragraph, index) in page.fbis.paragraph"
@@ -58,7 +58,7 @@ defineProps<{ page: HomePageContent }>()
       >
         <UPageCard
           variant="outline"
-          class="w-full overflow-hidden ring-fbis-blue"
+          class="w-full overflow-hidden ring-fbis-gray/20"
           :ui="{
             container: 'relative flex flex-col flex-1 sm:p-0 p-0'
           }"

@@ -20,7 +20,7 @@ const columns: FooterColumn[] = [
 </script>
 
 <template>
-  <UFooter class="bg-fbis-navy text-fbis-off-white">
+  <UFooter class="bg-fbis-red-dark text-fbis-off-white">
     <template #top>
       <UContainer class="pt-14 sm:pt-20">
         <UFooterColumns

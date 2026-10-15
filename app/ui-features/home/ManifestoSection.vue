@@ -17,7 +17,7 @@ const title = computed(() => {
   <UPageSection
     id="manifesto"
     :ui="{
-      root: 'relative isolate overflow-hidden scroll-mt-(--ui-header-height) bg-fbis-blue text-white',
+      root: 'relative isolate overflow-hidden scroll-mt-(--ui-header-height) bg-fbis-red-dark text-white',
       container: 'relative z-10 py-24 md:py-32 lg:py-30',
       title: 'max-w-5xl text-left font-display text-5xl leading-[0.98] font-semibold tracking-tight text-white sm:text-6xl lg:text-8xl'
     }"
@@ -30,7 +30,7 @@ const title = computed(() => {
         <svg
           viewBox="0 0 600 600"
           fill="none"
-          class="size-[24rem] text-fbis-yellow opacity-15 lg:size-[34rem]"
+          class="size-[24rem] text-fbis-black opacity-15 lg:size-[34rem]"
         >
           <circle
             cx="300"
@@ -84,9 +84,9 @@ const title = computed(() => {
       >
         <span
           aria-hidden="true"
-          class="mb-4 block h-1 w-16 rounded-full bg-fbis-yellow md:mb-10"
+          class="mb-4 block h-1 w-16 rounded-full bg-fbis-black md:mb-10"
         />
-        <span class="block text-white">{{ title.prefix }} <span class="text-fbis-yellow">{{ title.highlight }}</span></span>
+        <span class="block text-white">{{ title.prefix }} <span class="text-fbis-black">{{ title.highlight }}</span></span>
         <span class="block text-white">{{ title.rest }}</span>
       </Motion>
     </template>

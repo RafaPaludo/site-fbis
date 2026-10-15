@@ -41,16 +41,16 @@ const tabs = computed(() => props.page.schedule.days.map(day => ({
             v-for="(activity, index) in item.activities"
             :key="`${item.value}-${activity.time}-${activity.title}`"
             class="grid gap-x-6 gap-y-3 px-4 py-6 md:grid-cols-[7rem_1fr] md:py-8"
-            :class="index % 2 === 0 ? 'bg-fbis-off-white' : 'bg-fbis-yellow-soft'"
+            :class="index % 2 === 0 ? 'bg-fbis-off-white' : 'bg-fbis-red-soft'"
           >
-            <p class="font-display text-xl font-semibold tabular-nums text-fbis-blue md:text-2xl">
+            <p class="font-display text-xl font-semibold tabular-nums text-fbis-black md:text-2xl">
               {{ activity.time }}
             </p>
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.1em] text-primary">
                 {{ activity.stage }}
               </p>
-              <h3 class="mt-2 font-display text-xl font-semibold text-fbis-blue md:text-2xl">
+              <h3 class="mt-2 font-display text-xl font-semibold text-fbis-black md:text-2xl">
                 {{ activity.title }}
               </h3>
               <p class="mt-2 max-w-3xl leading-relaxed text-fbis-gray">

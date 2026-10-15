@@ -46,7 +46,7 @@ const selectedTheme = computed(() => props.page.themes2027.items.find(item => it
           <button
             :id="`theme-button-${item.id}`"
             type="button"
-            class="group flex w-full items-center gap-3 rounded-md px-3 py-3 text-left font-semibold text-fbis-blue transition-colors hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            class="group flex w-full items-center gap-3 rounded-md px-3 py-3 text-left font-semibold text-fbis-black transition-colors hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             :class="{ 'bg-primary/5': item.id === selectedThemeId }"
             :aria-pressed="item.id === selectedThemeId"
             aria-controls="theme-panel"

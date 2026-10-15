@@ -34,7 +34,7 @@ defineProps<{ page: HomePageContent }>()
           class="space-y-4 text-lg text-fbis-gray"
         >
           <address class="space-y-1 not-italic">
-            <h3 class="text-3xl text-fbis-blue font-bold">
+            <h3 class="text-3xl text-fbis-black font-bold">
               {{ page.location.venue }}
             </h3>
 
@@ -52,7 +52,7 @@ defineProps<{ page: HomePageContent }>()
                   class="size-6 text-primary"
                   aria-hidden="true"
                 />
-                <h3 class="font-display text-xl font-semibold text-fbis-blue">
+                <h3 class="font-display text-xl font-semibold text-fbis-black">
                   Endereço
                 </h3>
                 <UButton
@@ -81,7 +81,7 @@ defineProps<{ page: HomePageContent }>()
                   class="size-6 text-primary"
                   aria-hidden="true"
                 />
-                <h3 class="font-display text-xl font-semibold text-fbis-blue">
+                <h3 class="font-display text-xl font-semibold text-fbis-black">
                   {{ service.title }}
                 </h3>
                 <p
@@ -102,7 +102,7 @@ defineProps<{ page: HomePageContent }>()
                       :to="link.to"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1 text-fbis-blue underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary"
+                      class="inline-flex items-center gap-1 text-fbis-red-dark underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary"
                     >
                       {{ link.label }}
                       <UIcon
@@ -136,16 +136,16 @@ defineProps<{ page: HomePageContent }>()
           :ui="{ base: 'columns-2 gap-6 sm:columns-2' }"
           class="mt-6"
         >
-          <div class="break-inside-avoid border-l-2 border-fbis-yellow py-1 pl-4">
-            <h3 class="font-display text-lg font-semibold text-fbis-blue">
+          <div class="break-inside-avoid border-l-2 border-fbis-red py-1 pl-4">
+            <h3 class="font-display text-lg font-semibold text-fbis-black">
               Data
             </h3>
             <p class="mt-1 text-fbis-gray">
               25 e 26 de maio
             </p>
           </div>
-          <div class="break-inside-avoid border-l-2 border-fbis-yellow py-1 pl-4">
-            <h3 class="font-display text-lg font-semibold text-fbis-blue">
+          <div class="break-inside-avoid border-l-2 border-fbis-red py-1 pl-4">
+            <h3 class="font-display text-lg font-semibold text-fbis-black">
               FORMATO
             </h3>
             <p class="mt-1 text-fbis-gray">

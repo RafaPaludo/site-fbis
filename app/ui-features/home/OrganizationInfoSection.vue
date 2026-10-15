@@ -6,7 +6,7 @@ defineProps<{ page: HomePageContent }>()
 </script>
 
 <template>
-  <div class="bg-fbis-yellow-soft">
+  <div class="bg-fbis-red-soft">
     <UPageGrid
       :ui="{
         base: 'w-full max-w-(--ui-container) mx-auto relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'

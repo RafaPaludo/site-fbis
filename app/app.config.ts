@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'blue',
+      primary: 'red',
       warning: 'yellow',
       neutral: 'zinc'
     },
@@ -11,7 +11,7 @@ export default defineAppConfig({
         root: 'scroll-mt-(--ui-header-height)',
         container: 'sm:gap-8 lg:py-24',
         headline: 'font-mono font-medium text-xs text-primary uppercase tracking-[0.12em] text-center',
-        title: 'text-blue-950',
+        title: '--color-fbis-black',
         description: 'text-dimmed'
       }
     },

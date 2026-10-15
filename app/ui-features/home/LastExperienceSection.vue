@@ -39,7 +39,7 @@ defineProps<{ page: HomePageContent }>()
       <div class="relative isolate grid w-full place-items-center lg:col-span-2 lg:py-8">
         <div
           aria-hidden="true"
-          class="pointer-events-none col-start-1 row-start-1 h-[min(80vh,640px)] aspect-[9/16] translate-x-5 translate-y-5 rotate-1 lg:rotate-16 rounded-lg bg-fbis-yellow-soft lg:block"
+          class="pointer-events-none col-start-1 row-start-1 h-[min(80vh,640px)] aspect-[9/16] translate-x-5 translate-y-5 rotate-1 lg:rotate-16 rounded-lg bg-fbis-red-soft lg:block"
         />
         <iframe
           class="relative z-10 col-start-1 row-start-1 mx-auto h-[min(80vh,640px)] aspect-[9/16] max-w-full rounded-lg bg-black"
@@ -57,7 +57,7 @@ defineProps<{ page: HomePageContent }>()
           v-bind="staggerMotion(index)"
         >
           <div class="flex flex-col text-center lg:text-left">
-            <span class="font-display text-5xl leading-none font-bold text-fbis-yellow sm:text-8xl">{{ item.label.split(' ')[0] }}</span>
+            <span class="font-display text-5xl leading-none font-bold text-fbis-red sm:text-8xl">{{ item.label.split(' ')[0] }}</span>
             <span class="mt-2 text-base font-medium text-default">{{ item.label.split(' ').slice(1).join(' ') }}</span>
           </div>
         </Motion>

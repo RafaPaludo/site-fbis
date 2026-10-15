@@ -31,7 +31,7 @@ function enterMotion(delay = 0) {
           color="neutral"
           variant="subtle"
           :label="page.hero.headline"
-          class="rounded-full px-3 py-1.5 gap-1.5 bg-white/95 text-fbis-blue backdrop-blur-sm"
+          class="rounded-full px-3 py-1.5 gap-1.5 bg-white/95 text-fbis-black backdrop-blur-sm"
         >
           <template #leading>
             <UChip
