@@ -5,9 +5,9 @@ const columns: FooterColumn[] = [
   {
     label: 'Siga nas redes',
     children: [
-      { label: 'Instagram', icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/', target: '_blank' },
-      { label: 'YouTube', icon: 'i-simple-icons-youtube', to: 'https://www.youtube.com/', target: '_blank' },
-      { label: 'TikTok', icon: 'i-simple-icons-tiktok', to: 'https://www.tiktok.com/', target: '_blank' }
+      { label: 'Instagram', icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/forumdeinovacaosindical/', target: '_blank' },
+      { label: 'YouTube', icon: 'i-simple-icons-youtube', to: 'https://www.youtube.com/@Institutopoliticaboa', target: '_blank' },
+      { label: 'TikTok', icon: 'i-simple-icons-tiktok', to: 'https://www.tiktok.com/@politica.boa', target: '_blank' }
     ]
   },
   {
